@@ -51,6 +51,7 @@ body{
   font-weight:400;
   line-height:1.65;
   -webkit-font-smoothing:antialiased;
+  overflow-x:hidden; /* rede de segurança contra estouro horizontal */
 }
 
 img{max-width:100%;height:auto;display:block}
@@ -321,13 +322,21 @@ p{margin:0}
 
 .orbit{ display:grid;gap:clamp(2rem,6vw,3rem); }
 
-.orbit__stage{ display:flex;flex-direction:column;align-items:center;gap:1.8rem;position:relative; }
+.orbit__stage{
+  display:flex;flex-direction:column;align-items:center;gap:1.8rem;position:relative;
+  width:100%;max-width:100%;min-width:0;
+  /* align-items:center tira o "stretch" padrão do flex, então sem largura
+     explícita este container encolhe/estica para o tamanho do conteúdo dos
+     filhos (o trilho de chips, ~990px) em vez de respeitar a coluna do grid
+     pai — é o mesmo tipo de "grid/flex blowout" já visto neste projeto. */
+}
 .orbit__ring,.orbit__slot{ display:none; }
 
 /* trilho de chips — mobile */
 .orbit__chips{
   order:2;display:flex;gap:.6rem;
-  width:calc(100% + (var(--pad) * 2));max-width:none;
+  width:calc(100% + (var(--pad) * 2));max-width:calc(100% + (var(--pad) * 2));
+  margin-inline:calc(var(--pad) * -1);
   overflow-x:auto;scroll-snap-type:x mandatory;
   padding:.35rem var(--pad) 1rem;
   scrollbar-width:none;
