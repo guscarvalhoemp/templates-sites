@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Templates — Índice</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Segoe UI", Inter, Arial, sans-serif;
+    background: #0f1115;
+    color: #f4f4f2;
+    min-height: 100vh;
+    padding: 4rem 1.5rem;
+  }
+  .wrap { max-width: 960px; margin: 0 auto; }
+  h1 { font-size: clamp(1.8rem, 4vw, 2.6rem); margin-bottom: 0.5rem; }
+  p.lead { color: #a3a3ab; margin-bottom: 3rem; font-size: 1.05rem; }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.25rem;
+  }
+  a.card {
+    display: block;
+    border: 1px solid #26262e;
+    border-radius: 14px;
+    padding: 1.75rem;
+    text-decoration: none;
+    color: inherit;
+    background: #16161c;
+    transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+  }
+  a.card:hover {
+    transform: translateY(-3px);
+    border-color: #444;
+    background: #1c1c24;
+  }
+  .tag {
+    display: inline-block;
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #8a8a92;
+    margin-bottom: 0.6rem;
+  }
+  .card h2 { font-size: 1.25rem; margin-bottom: 0.4rem; }
+  .card p { font-size: 0.9rem; color: #9c9ca4; line-height: 1.5; }
+  .swatch { display: flex; gap: 6px; margin-top: 1rem; }
+  .swatch span { width: 18px; height: 18px; border-radius: 4px; display: inline-block; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>5 sites de exemplo</h1>
+    <p class="lead">Clique em qualquer card para abrir o site completo. Cada um tem identidade visual própria.</p>
+    <div class="grid">
+      <a class="card" href="site-01-boxfit/index.html">
+        <span class="tag">Academia / Personal Trainer</span>
+        <h2>IronCage Boxing &amp; Performance</h2>
+        <p>Dark, bold, alta energia — tipografia condensada, acento âmbar e GSAP.</p>
+        <div class="swatch"><span style="background:#0B0B0C"></span><span style="background:#FF4B2B"></span><span style="background:#FFFFFF"></span></div>
+      </a>
+      <a class="card" href="site-02-nutricionista/index.html">
+        <span class="tag">Clínicas e Estética / Nutricionista</span>
+        <h2>Nutre Bellevie</h2>
+        <p>Composição circular — seletor orbital, prato que se monta no scroll e comparador arrastável.</p>
+        <div class="swatch"><span style="background:#FAF6F0;border:1px solid #333"></span><span style="background:#3E5641"></span><span style="background:#E8967A"></span></div>
+      </a>
+      <a class="card" href="site-03-construtora/index.html">
+        <span class="tag">Construção Civil / Arquitetura</span>
+        <h2>Cerne Construções</h2>
+        <p>Portfólio espacial — imagem segue o cursor, obra expande em tela cheia, fases da obra no scroll.</p>
+        <div class="swatch"><span style="background:#F3F0EA;border:1px solid #333"></span><span style="background:#1A1A18"></span><span style="background:#A9825A"></span></div>
+      </a>
+      <a class="card" href="site-04-advocacia/index.html">
+        <span class="tag">Advocacia / Contabilidade</span>
+        <h2>Marchetti &amp; Souza Advogados</h2>
+        <p>Dossiê editorial — split-screen pinado, trilho de índice e títulos revelados linha a linha.</p>
+        <div class="swatch"><span style="background:#14181C"></span><span style="background:#F3EFE6;border:1px solid #333"></span><span style="background:#8CA0C9"></span></div>
+      </a>
+      <a class="card" href="site-05-gastronomia/index.html">
+        <span class="tag">Eventos e Gastronomia</span>
+        <h2>Casa Fabbrica</h2>
+        <p>Cardápio em scroll horizontal — prato em foco no centro, clique traz ao destaque, molduras em arco.</p>
+        <div class="swatch"><span style="background:#FBF6EE;border:1px solid #333"></span><span style="background:#5C1A2E"></span><span style="background:#C9A15C"></span></div>
+      </a>
+    </div>
+  </div>
+</body>
+</html>
