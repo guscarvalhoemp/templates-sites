@@ -34,6 +34,7 @@
   --shell-w: 1180px;
   --radius-s: 4px;
   --radius-m: 10px;
+  --radius-arc: 50% 50% 10% 10% / 62% 62% 10% 10%; /* moldura em arco — assinatura visual da casa */
   --ease-out: cubic-bezier(.22,.9,.32,1);
   --dur-fast: .3s;
   --dur-mid: .6s;
@@ -161,6 +162,7 @@ em{ font-style: italic; font-family: var(--font-display); font-weight: 600; colo
   position: fixed; inset: 0; z-index: 90; background: var(--wine-dark);
   display: flex; align-items: center; justify-content: center;
 }
+.mobile-nav[hidden]{ display: none; } /* display:flex acima vence [hidden] sem isso — menu ficava sempre visível */
 .mobile-nav ul{ display: flex; flex-direction: column; gap: var(--space-3); text-align: center; }
 .mobile-nav a{ font-size: 1.6rem; color: var(--cream); font-weight: 500; }
 
@@ -228,6 +230,73 @@ em{ font-style: italic; font-family: var(--font-display); font-weight: 600; colo
 }
 @keyframes cue-pulse{ 0%,100%{ opacity: .3; } 50%{ opacity: 1; } }
 @media (prefers-reduced-motion: reduce){ .hero__scrollcue-line{ animation: none; } }
+
+/* ---------- Molduras flutuantes — amostragem do cardápio ---------- */
+.hero__floats{ position: absolute; inset: 0; z-index: 1; pointer-events: none; }
+.float-card{
+  position: absolute; margin: 0;
+  width: clamp(96px, 13vw, 158px);
+  display: flex; flex-direction: column; align-items: center; gap: .5rem;
+  filter: drop-shadow(0 18px 30px rgba(20,6,11,.35));
+}
+.float-card--a{ left: 4%; bottom: 12%; }
+.float-card--b{ right: 5%; bottom: 26%; width: clamp(88px, 11vw, 132px); }
+.float-card__frame{
+  display: block; width: 100%; aspect-ratio: 3 / 4; overflow: hidden;
+  border-radius: var(--radius-arc);
+  border: 3px solid var(--cream-50);
+}
+.float-card--b .float-card__frame{ aspect-ratio: 1 / 1; }
+.float-card__frame img{ width: 100%; height: 100%; object-fit: cover; }
+.float-card figcaption{
+  font-family: var(--font-display); font-weight: 600; color: var(--cream);
+  background: var(--wine); padding: .3em 1em; border-radius: 999px;
+  font-size: clamp(1rem, 1.6vw, 1.3rem); white-space: nowrap;
+  box-shadow: 0 8px 18px rgba(20,6,11,.3);
+}
+@media (max-width: 640px){
+  .float-card{ width: 78px; gap: .35rem; }
+  .float-card--a{ left: 3%; bottom: 4%; }
+  .float-card--b{ right: 3%; bottom: 15%; width: 68px; }
+  .float-card figcaption{ font-size: .8rem; padding: .25em .75em; }
+}
+
+/* =========================================================================
+   MOOD — seção "meio do site": cursor deixa um rastro de fotos do cardápio
+   ========================================================================= */
+.mood{
+  position: relative; overflow: hidden;
+  min-height: 62vh;
+  display: flex; align-items: center; justify-content: center; text-align: center;
+  background: var(--wine-dark);
+  padding: var(--space-6) var(--space-3);
+  cursor: crosshair;
+}
+.mood__tag{
+  font-family: var(--font-display); font-size: clamp(1.4rem, 2.6vw, 2rem);
+  color: var(--gold-soft); margin-bottom: var(--space-2); display: block;
+}
+.mood__title{
+  color: var(--cream); font-size: clamp(2rem, 5.4vw, 4rem); line-height: 1.1;
+  max-width: 18ch; margin: 0 auto; font-weight: 600;
+}
+.mood__hint{
+  margin-top: var(--space-2); color: var(--cream-50); font-size: .85rem;
+  letter-spacing: .1em; text-transform: uppercase;
+}
+.mood__trail{ position: absolute; inset: 0; z-index: 0; pointer-events: none; }
+.mood__trail img{
+  position: absolute; top: 0; left: 0;
+  width: 128px; height: 128px; object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--cream-50);
+  opacity: 0;
+  will-change: transform, opacity;
+}
+@media (max-width: 640px){
+  .mood{ min-height: 46vh; }
+  .mood__trail img{ width: 92px; height: 92px; }
+}
 
 /* =========================================================================
    SPLIT — blocos alternados com parallax

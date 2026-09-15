@@ -109,6 +109,69 @@
   heroIntro();
 
   /* =======================================================================
+     MOOD — rastro de fotos do cardápio seguindo o cursor
+     (assinatura própria: nenhum outro site do projeto usa esse mecanismo)
+     ======================================================================= */
+  function initMoodTrail(){
+    var section = document.querySelector(".mood");
+    var pool = document.querySelector("[data-trail]");
+    if (!section || !pool || prefersReduced) return;
+
+    var SOURCES = [
+      "https://images.unsplash.com/photo-1476124369491-e7addf5db371?auto=format&fit=crop&w=260&q=70",
+      "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=260&q=70",
+      "https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=260&q=70",
+      "https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=260&q=70",
+      "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=260&q=70"
+    ];
+
+    var imgs = SOURCES.map(function(src){
+      var img = document.createElement("img");
+      img.src = src;
+      img.alt = "";
+      img.loading = "lazy";
+      pool.appendChild(img);
+      gsap.set(img, { autoAlpha: 0, scale: .8 });
+      return img;
+    });
+
+    var THRESHOLD = 70;
+    var lastX = 0, lastY = 0, index = 0, idleTimer = null;
+
+    function fadeAllOut(duration){
+      imgs.forEach(function(img){
+        gsap.to(img, { autoAlpha: 0, scale: .2, duration: duration || .5, ease: "expo.out" });
+      });
+    }
+
+    function onMove(e){
+      var rect = section.getBoundingClientRect();
+      var x = e.clientX - rect.left;
+      var y = e.clientY - rect.top;
+      var dist = Math.hypot(x - lastX, y - lastY);
+      if (dist < THRESHOLD) return;
+
+      var img = imgs[index % imgs.length];
+      gsap.set(img, { x: x - img.offsetWidth / 2, y: y - img.offsetHeight / 2, zIndex: index, force3D: true });
+      gsap.fromTo(img, { autoAlpha: 0, scale: .8 }, { autoAlpha: 1, scale: 1, duration: .25, overwrite: true });
+
+      lastX = x; lastY = y; index++;
+      clearTimeout(idleTimer);
+      idleTimer = setTimeout(function(){ fadeAllOut(.8); }, 400);
+    }
+
+    function onLeave(){
+      clearTimeout(idleTimer);
+      fadeAllOut(.5);
+      lastX = 0; lastY = 0;
+    }
+
+    section.addEventListener("mousemove", onMove);
+    section.addEventListener("mouseleave", onLeave);
+  }
+  initMoodTrail();
+
+  /* =======================================================================
      ScrollTrigger: parallax nos blocos + citações em foco
      ======================================================================= */
   if (!hasST){ return; }
@@ -121,6 +184,25 @@
   }, function(context){
     var isMobile = context.conditions.isMobile;
     var parallaxAmount = prefersReduced ? 0 : (isMobile ? 8 : 16);
+
+    /* ---- Parallax nas molduras flutuantes do hero (profundidades diferentes) ---- */
+    if (!prefersReduced){
+      var floatA = document.querySelector(".float-card--a");
+      var floatB = document.querySelector(".float-card--b");
+      var heroSection = document.querySelector(".hero");
+      if (floatA && heroSection){
+        gsap.fromTo(floatA, { y: 0 }, {
+          y: isMobile ? -30 : -70, ease: "none",
+          scrollTrigger: { trigger: heroSection, start: "top top", end: "bottom top", scrub: true }
+        });
+      }
+      if (floatB && heroSection){
+        gsap.fromTo(floatB, { y: 0 }, {
+          y: isMobile ? -16 : -36, ease: "none",
+          scrollTrigger: { trigger: heroSection, start: "top top", end: "bottom top", scrub: true }
+        });
+      }
+    }
 
     /* ---- Parallax nos blocos alternados ---- */
     document.querySelectorAll("[data-parallax]").forEach(function(mediaEl){
