@@ -7,85 +7,45 @@
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
-    font-family: -apple-system, "Segoe UI", Inter, Arial, sans-serif;
-    background: #0f1115;
-    color: #f4f4f2;
+    font-family: -apple-system, "Segoe UI", Arial, sans-serif;
+    background: #ffffff;
+    color: #111111;
     min-height: 100vh;
-    padding: 4rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1.5rem;
   }
-  .wrap { max-width: 960px; margin: 0 auto; }
-  h1 { font-size: clamp(1.8rem, 4vw, 2.6rem); margin-bottom: 0.5rem; }
-  p.lead { color: #a3a3ab; margin-bottom: 3rem; font-size: 1.05rem; }
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 1.25rem;
+  .list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    max-width: 640px;
   }
-  a.card {
-    display: block;
-    border: 1px solid #26262e;
-    border-radius: 14px;
-    padding: 1.75rem;
-    text-decoration: none;
-    color: inherit;
-    background: #16161c;
-    transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
-  }
-  a.card:hover {
-    transform: translateY(-3px);
-    border-color: #444;
-    background: #1c1c24;
-  }
-  .tag {
+  a.pill {
     display: inline-block;
-    font-size: 0.7rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: #8a8a92;
-    margin-bottom: 0.6rem;
+    padding: 0.75em 1.6em;
+    border: 1px solid #d5d5d5;
+    border-radius: 999px;
+    text-decoration: none;
+    color: #111111;
+    font-size: 0.95rem;
+    transition: border-color 0.15s ease, background 0.15s ease;
   }
-  .card h2 { font-size: 1.25rem; margin-bottom: 0.4rem; }
-  .card p { font-size: 0.9rem; color: #9c9ca4; line-height: 1.5; }
-  .swatch { display: flex; gap: 6px; margin-top: 1rem; }
-  .swatch span { width: 18px; height: 18px; border-radius: 4px; display: inline-block; }
+  a.pill:hover {
+    border-color: #111111;
+    background: #f5f5f5;
+  }
 </style>
 </head>
 <body>
-  <div class="wrap">
-    <h1>Escolha um modelo para ver na prática</h1>
-    <p class="lead">Cada card abaixo abre um site completo. Clique para navegar.</p>
-    <div class="grid">
-      <a class="card" href="site-01-boxfit/index.html">
-        <span class="tag">Academia / Personal Trainer</span>
-        <h2>IronCage Boxing &amp; Performance</h2>
-        <p>Visual de alta energia, com contato rápido pelo WhatsApp para quem quer marcar uma aula.</p>
-        <div class="swatch"><span style="background:#0B0B0C"></span><span style="background:#FF4B2B"></span><span style="background:#FFFFFF"></span></div>
-      </a>
-      <a class="card" href="site-02-nutricionista/index.html">
-        <span class="tag">Clínicas e Estética</span>
-        <h2>Lumière Estética</h2>
-        <p>Elegante e discreto, pensado para clínicas que vendem confiança antes de qualquer procedimento.</p>
-        <div class="swatch"><span style="background:#F6F1ED;border:1px solid #333"></span><span style="background:#211B1E"></span><span style="background:#9B7E8C"></span></div>
-      </a>
-      <a class="card" href="site-03-construtora/index.html">
-        <span class="tag">Construção Civil / Arquitetura</span>
-        <h2>Cerne Construções</h2>
-        <p>Portfólio de obras em destaque logo na entrada, sem distrações até o visitante ver o trabalho pronto.</p>
-        <div class="swatch"><span style="background:#F3F0EA;border:1px solid #333"></span><span style="background:#1A1A18"></span><span style="background:#A9825A"></span></div>
-      </a>
-      <a class="card" href="site-04-ecommerce/index.html">
-        <span class="tag">Loja Virtual</span>
-        <h2>CULTO Café</h2>
-        <p>Vitrine de produtos com categorias e carrinho, pronta para quem vende online.</p>
-        <div class="swatch"><span style="background:#14100D"></span><span style="background:#F2ECE1;border:1px solid #333"></span><span style="background:#C4D93B"></span></div>
-      </a>
-      <a class="card" href="site-05-gastronomia/index.html">
-        <span class="tag">Eventos e Gastronomia</span>
-        <h2>Casa Fabbrica</h2>
-        <p>Cardápio visual e convite direto para reserva, ideal para restaurantes e buffets de eventos.</p>
-        <div class="swatch"><span style="background:#FBF6EE;border:1px solid #333"></span><span style="background:#5C1A2E"></span><span style="background:#C9A15C"></span></div>
-      </a>
-    </div>
+  <div class="list">
+    <a class="pill" href="site-01-boxfit/index.html">Template 1</a>
+    <a class="pill" href="site-02-nutricionista/index.html">Template 2</a>
+    <a class="pill" href="site-03-construtora/index.html">Template 3</a>
+    <a class="pill" href="site-04-ecommerce/index.html">Template 4</a>
+    <a class="pill" href="site-05-gastronomia/index.html">Template 5</a>
   </div>
 </body>
 </html>
