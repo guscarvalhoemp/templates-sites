@@ -4,14 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Casa Fabbrica — Eventos &amp; Gastronomia de Autor</title>
-<meta name="description" content="Casa Fabbrica: buffet de autor, adega privativa e espaço para casamentos, eventos corporativos e celebrações particulares. Solicite um orçamento sem compromisso.">
+<meta name="description" content="Casa Fabbrica: buffet de autor, adega privativa e espaço para casamentos, eventos corporativos e celebrações particulares. Reserve seu evento.">
 <meta name="theme-color" content="#5C1A2E">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='10' fill='%235C1A2E'/%3E%3Cpath d='M16 8c-3 0-5.2 2.2-5.2 5 0 2.3 1.6 4.3 3.8 4.8V22h-2.4v1.6h5.6V22h-2.4v-4.2c2.2-.5 3.8-2.5 3.8-4.8 0-2.8-2.2-5-5.2-5Z' fill='%23C9A15C'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
-<script>document.documentElement.className += " js";</script>
 </head>
 <body>
 
@@ -20,27 +19,27 @@
 <!-- ============================ HEADER ============================ -->
 <header class="site-header" id="topo">
   <div class="shell header-inner">
-    <a href="#topo" class="logo" aria-label="Casa Fabbrica — início">
-      <span class="logo-mark" aria-hidden="true">
-        <svg viewBox="0 0 32 32" width="26" height="26" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <a href="#topo" class="brand" aria-label="Casa Fabbrica — início">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle cx="16" cy="16" r="15" stroke="currentColor" stroke-width="1.3"/>
           <path d="M16 9c-2.6 0-4.6 1.9-4.6 4.3 0 2 1.4 3.7 3.3 4.1v3.4h-2.1v1.4h4.9v-1.4h-2.1v-3.4c1.9-.4 3.3-2.1 3.3-4.1C20.6 10.9 18.6 9 16 9Z" fill="currentColor"/>
         </svg>
       </span>
-      <span class="logo-text">Casa <em>Fabbrica</em></span>
+      <span class="brand-text">Casa <em>Fabbrica</em></span>
     </a>
 
     <nav class="main-nav" aria-label="Navegação principal">
       <ul>
         <li><a href="#cardapio">Cardápio</a></li>
         <li><a href="#a-casa">A Casa</a></li>
+        <li><a href="#diferenciais">Diferenciais</a></li>
         <li><a href="#depoimentos">Depoimentos</a></li>
-        <li><a href="#contato">Contato</a></li>
       </ul>
     </nav>
 
     <div class="header-actions">
-      <a href="#contato" class="btn btn-primary btn-sm" data-magnetic>Orçamento</a>
+      <a href="#reserva" class="btn btn-outline btn-sm">Reservar</a>
       <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Abrir menu">
         <span></span><span></span><span></span>
       </button>
@@ -52,10 +51,10 @@
       <ul>
         <li><a href="#cardapio">Cardápio</a></li>
         <li><a href="#a-casa">A Casa</a></li>
+        <li><a href="#diferenciais">Diferenciais</a></li>
         <li><a href="#depoimentos">Depoimentos</a></li>
-        <li><a href="#contato">Contato</a></li>
+        <li><a href="#reserva">Reserva</a></li>
       </ul>
-      <a href="#contato" class="btn btn-primary btn-block">Solicitar Orçamento</a>
     </nav>
   </div>
 </header>
@@ -64,349 +63,130 @@
 
   <!-- ============================ HERO ============================ -->
   <section class="hero" aria-label="Abertura">
-    <div class="shell hero-inner">
+    <div class="hero__bg" aria-hidden="true">
+      <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1920&q=80" alt="" loading="eager" fetchpriority="high">
+      <div class="hero__scrim"></div>
+    </div>
 
-      <p class="script-note hero-note" data-reveal>bem-vindo à casa</p>
+    <div class="hero__content">
+      <p class="eyebrow eyebrow--light hero__eyebrow" data-hero-fade>Eventos &amp; gastronomia de autor</p>
 
-      <h1 class="hero-title">
-        <span class="line"><span class="w">A</span> <span class="w">mesa</span> <span class="w">certa</span></span>
-        <span class="line"><span class="w">transforma</span> <span class="w">uma</span></span>
-        <span class="line"><span class="w">festa</span> <span class="w"><em>em memória.</em></span></span>
-      </h1>
-
-      <div class="hero-stage">
-        <figure class="arch hero-arch" id="heroArch">
-          <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1200&q=80"
-               alt="Mesa posta à luz de velas, com taças de vinho, preparada para um jantar na Casa Fabbrica"
-               width="1200" height="1600" fetchpriority="high">
-        </figure>
-
-        <div class="seal" id="seal" aria-hidden="true">
-          <svg class="seal-ring" viewBox="0 0 130 130" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <path id="sealPath" d="M65,65 m-49,0 a49,49 0 1,1 98,0 a49,49 0 1,1 -98,0"/>
-            </defs>
-            <text class="seal-text"><textPath href="#sealPath" startOffset="0">Casa Fabbrica · desde 2012 · cozinha de autor · </textPath></text>
-          </svg>
-          <span class="seal-core">
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" aria-hidden="true">
-              <path d="M12 3v18M8 3v5a4 4 0 0 0 8 0V3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-            </svg>
-          </span>
-        </div>
-
-        <p class="hero-hint" id="heroHint"><span class="hint-dot" aria-hidden="true"></span><span class="hint-text">mexa o cursor pela mesa</span></p>
+      <div class="hero__logo">
+        <span class="sr-only">Casa Fabbrica</span>
+        <p class="hero__wordmark" aria-hidden="true" data-split>Casa Fabbrica</p>
+        <span class="hero__rule" aria-hidden="true"></span>
       </div>
 
-      <div class="hero-foot">
-        <p class="hero-lede" data-reveal>Buffet de autor, adega privativa e um espaço para celebrações que pedem mais do que um bom cardápio — pedem cuidado.</p>
-        <div class="hero-cta" data-reveal>
-          <a href="#contato" class="btn btn-primary" data-magnetic>Solicitar Orçamento</a>
-          <a href="#cardapio" class="btn btn-ghost">Ver o cardápio</a>
-        </div>
+      <h1 class="hero__title" data-hero-fade>A mesa certa transforma uma festa em memória.</h1>
+
+      <p class="hero__lede" data-hero-fade>Buffet autoral, adega privativa e um espaço para celebrações que pedem mais do que um bom cardápio — pedem cuidado.</p>
+
+      <div class="hero__scrollcue" data-hero-fade aria-hidden="true">
+        <span class="hero__scrollcue-line"></span>
+        <span>role para conhecer a casa</span>
       </div>
     </div>
   </section>
 
-  <!-- ============================ FAIXA ============================ -->
-  <section class="strip" aria-label="Categorias de serviço">
-    <div class="marquee" id="marquee">
-      <ul class="marquee-track">
-        <li>Casamentos</li><li class="sep" aria-hidden="true">✳</li>
-        <li>Eventos Corporativos</li><li class="sep" aria-hidden="true">✳</li>
-        <li>Degustações</li><li class="sep" aria-hidden="true">✳</li>
-        <li>Adega Privativa</li><li class="sep" aria-hidden="true">✳</li>
+  <!-- ================== BLOCO 1 — CARDÁPIO ================== -->
+  <section class="split" id="cardapio" aria-labelledby="cardapio-titulo">
+    <div class="split__media" data-parallax>
+      <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=1200&q=80" alt="Massa fresca com molho de cozimento lento, finalizada à mesa em evento da Casa Fabbrica" loading="lazy" width="1200" height="1500">
+    </div>
+    <div class="split__text">
+      <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span>O cardápio</p>
+      <h2 id="cardapio-titulo" data-reveal>Cozinha autoral, pensada tempo a tempo.</h2>
+      <p class="split__lede" data-reveal>Do couvert à sobremesa, cada cardápio é construído junto com você: pães de fermentação natural, massas frescas feitas na hora e um ragu que cozinha por horas antes de chegar ao prato.</p>
+      <ul class="split__list" data-reveal>
+        <li>Couvert de fermentação natural e curados da casa</li>
+        <li>Massas e pratos principais preparados no dia do evento</li>
+        <li>Estação de sobremesas aberta até o fim da festa</li>
+        <li>Cardápio construído com o cliente, sem repetição de menu</li>
       </ul>
-      <ul class="marquee-track" aria-hidden="true">
-        <li>Casamentos</li><li class="sep">✳</li>
-        <li>Eventos Corporativos</li><li class="sep">✳</li>
-        <li>Degustações</li><li class="sep">✳</li>
-        <li>Adega Privativa</li><li class="sep">✳</li>
+      <a href="#reserva" class="split__link" data-reveal>Provar o cardápio<span aria-hidden="true"> →</span></a>
+    </div>
+  </section>
+
+  <!-- ================== BLOCO 2 — A CASA ================== -->
+  <section class="split split--reverse" id="a-casa" aria-labelledby="casa-titulo">
+    <div class="split__media" data-parallax>
+      <img src="https://images.unsplash.com/photo-1590846406792-0adc7f938f1d?auto=format&fit=crop&w=1200&q=80" alt="Salão interno da Casa Fabbrica com iluminação aconchegante, preparado para receber convidados" loading="lazy" width="1200" height="1500">
+    </div>
+    <div class="split__text">
+      <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span>A casa</p>
+      <h2 id="casa-titulo" data-reveal>Um espaço com escala para 180 pessoas — e alma de jantar pequeno.</h2>
+      <p class="split__lede" data-reveal>Salão principal, jardim para cerimônias ao entardecer e um salão reservado para grupos menores. Toda a estrutura fica sob um único teto, com cerimonial próprio do ensaio ao último brinde.</p>
+      <ul class="split__list" data-reveal>
+        <li>Salão principal para até 180 convidados</li>
+        <li>Jardim com iluminação cênica para cerimônias</li>
+        <li>Salão reservado para até 40 lugares</li>
+        <li>Cerimonial próprio, do ensaio à última taça</li>
       </ul>
+      <a href="#reserva" class="split__link" data-reveal>Agendar visita guiada<span aria-hidden="true"> →</span></a>
     </div>
   </section>
 
-  <!-- ================== CARDÁPIO — TRILHA HORIZONTAL ================== -->
-  <section class="stage" id="cardapio" aria-labelledby="cardapio-titulo">
-    <div class="stage-inner">
-
-      <header class="stage-head">
-        <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span>O cardápio</p>
-        <h2 id="cardapio-titulo">Oito tempos que <em>atravessam a sala</em>.</h2>
-        <p class="script-note stage-note">role — ou toque num prato pequeno</p>
-      </header>
-
-      <div class="track-viewport" id="trackViewport">
-        <ul class="track" id="track">
-
-          <li class="dish" data-dish>
-            <button class="dish-btn" type="button">
-              <span class="arch dish-frame">
-                <img src="https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?auto=format&fit=crop&w=700&q=80" alt="Pães de fermentação natural servidos em tábua, com manteiga e azeite" loading="lazy" width="700" height="933">
-                <span class="dish-num" aria-hidden="true">01</span>
-              </span>
-              <span class="dish-meta">
-                <span class="dish-cat">Para começar</span>
-                <span class="dish-name">Couvert da Casa</span>
-                <span class="dish-desc">Pães de fermentação natural, manteiga defumada e azeite da serra.</span>
-              </span>
-            </button>
-          </li>
-
-          <li class="dish" data-dish>
-            <button class="dish-btn" type="button">
-              <span class="arch dish-frame">
-                <img src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=700&q=80" alt="Tábua de queijos, embutidos artesanais e conservas" loading="lazy" width="700" height="933">
-                <span class="dish-num" aria-hidden="true">02</span>
-              </span>
-              <span class="dish-meta">
-                <span class="dish-cat">Para começar</span>
-                <span class="dish-name">Tábua de Curados</span>
-                <span class="dish-desc">Queijos de cabra, embutidos artesanais e conservas da nossa horta.</span>
-              </span>
-            </button>
-          </li>
-
-          <li class="dish" data-dish>
-            <button class="dish-btn" type="button">
-              <span class="arch dish-frame">
-                <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=700&q=80" alt="Massa fresca com molho de cozimento lento servida em prato fundo" loading="lazy" width="700" height="933">
-                <span class="dish-num" aria-hidden="true">03</span>
-              </span>
-              <span class="dish-meta">
-                <span class="dish-cat">Prato principal</span>
-                <span class="dish-name">Massa da Nonna</span>
-                <span class="dish-desc">Massa fresca feita na hora e ragu de cozimento lento, finalizado à mesa.</span>
-              </span>
-            </button>
-          </li>
-
-          <li class="dish" data-dish>
-            <button class="dish-btn" type="button">
-              <span class="arch dish-frame">
-                <img src="https://images.unsplash.com/photo-1533777857889-4be7c70b33f7?auto=format&fit=crop&w=700&q=80" alt="Prato autoral com apresentação refinada, servido em evento" loading="lazy" width="700" height="933">
-                <span class="dish-num" aria-hidden="true">04</span>
-              </span>
-              <span class="dish-meta">
-                <span class="dish-cat">Prato principal</span>
-                <span class="dish-name">Buffet Completo</span>
-                <span class="dish-desc">Do couvert à sobremesa, cardápio autoral construído com você e servido por equipe própria.</span>
-              </span>
-            </button>
-          </li>
-
-          <li class="dish" data-dish>
-            <button class="dish-btn" type="button">
-              <span class="arch dish-frame">
-                <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=700&q=80" alt="Chef finalizando um prato autoral na cozinha" loading="lazy" width="700" height="933">
-                <span class="dish-num" aria-hidden="true">05</span>
-              </span>
-              <span class="dish-meta">
-                <span class="dish-cat">Ao vivo</span>
-                <span class="dish-name">Chef Particular</span>
-                <span class="dish-desc">Menu assinado e preparado diante dos convidados, para jantares íntimos.</span>
-              </span>
-            </button>
-          </li>
-
-          <li class="dish" data-dish>
-            <button class="dish-btn" type="button">
-              <span class="arch dish-frame">
-                <img src="https://images.unsplash.com/photo-1478146059778-26028b07395a?auto=format&fit=crop&w=700&q=80" alt="Garrafas de vinho selecionadas na adega privativa" loading="lazy" width="700" height="933">
-                <span class="dish-num" aria-hidden="true">06</span>
-              </span>
-              <span class="dish-meta">
-                <span class="dish-cat">Para beber</span>
-                <span class="dish-name">Adega Privativa</span>
-                <span class="dish-desc">Rótulos nacionais e importados, harmonizados prato a prato pelo sommelier da casa.</span>
-              </span>
-            </button>
-          </li>
-
-          <li class="dish" data-dish>
-            <button class="dish-btn" type="button">
-              <span class="arch dish-frame">
-                <img src="https://images.unsplash.com/photo-1519690889869-e705e59f72e1?auto=format&fit=crop&w=700&q=80" alt="Mesa posta com taças, pronta para uma degustação guiada" loading="lazy" width="700" height="933">
-                <span class="dish-num" aria-hidden="true">07</span>
-              </span>
-              <span class="dish-meta">
-                <span class="dish-cat">Para beber</span>
-                <span class="dish-name">Degustação Guiada</span>
-                <span class="dish-desc">Prova conduzida pelo chef, em seis tempos, com harmonização à mesa.</span>
-              </span>
-            </button>
-          </li>
-
-          <li class="dish" data-dish>
-            <button class="dish-btn" type="button">
-              <span class="arch dish-frame">
-                <img src="https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?auto=format&fit=crop&w=700&q=80" alt="Sobremesa artesanal servida em estação de doces" loading="lazy" width="700" height="933">
-                <span class="dish-num" aria-hidden="true">08</span>
-              </span>
-              <span class="dish-meta">
-                <span class="dish-cat">Para terminar</span>
-                <span class="dish-name">Doce Fim</span>
-                <span class="dish-desc">Sobremesas de forno e geladas, em estação aberta até o fim da festa.</span>
-              </span>
-            </button>
-          </li>
-
-        </ul>
-      </div>
-
-      <div class="stage-nav">
-        <button class="round-btn" type="button" id="prevDish" aria-label="Prato anterior">
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" aria-hidden="true"><path d="M15 5l-7 7 7 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </button>
-        <ol class="dots" id="dots" aria-label="Pratos do cardápio"></ol>
-        <button class="round-btn" type="button" id="nextDish" aria-label="Próximo prato">
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" aria-hidden="true"><path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </button>
-      </div>
-
-      <div class="stage-progress" aria-hidden="true"><span id="stageBar"></span></div>
+  <!-- ================== BLOCO 3 — DIFERENCIAIS ================== -->
+  <section class="split" id="diferenciais" aria-labelledby="dif-titulo">
+    <div class="split__media" data-parallax>
+      <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1200&q=80" alt="Chef finalizando um prato autoral na cozinha da Casa Fabbrica" loading="lazy" width="1200" height="1500">
     </div>
-  </section>
-
-  <!-- ============================ A CASA ============================ -->
-  <section class="casa" id="a-casa" aria-labelledby="casa-titulo">
-    <div class="shell">
-      <header class="casa-head">
-        <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span>A Casa</p>
-        <h2 id="casa-titulo" data-reveal>Cozinha de família, servida em <em>escala de evento</em>.</h2>
-        <p class="casa-lede" data-reveal>Há mais de uma década reunimos chefs, sommeliers e cerimonial sob o mesmo teto, para que qualquer celebração receba a mesma atenção artesanal de um jantar pequeno.</p>
-      </header>
-
-      <div class="gallery" id="gallery">
-        <figure class="gallery-main" id="galleryMain">
-          <img src="https://images.unsplash.com/photo-1590846406792-0adc7f938f1d?auto=format&fit=crop&w=1000&q=80" alt="Salão interno com iluminação aconchegante, preparado para receber convidados" loading="lazy" width="1000" height="1250" data-caption="O salão principal, montado para 180 convidados">
-        </figure>
-
-        <p class="script-note gallery-note">toque numa foto pequena</p>
-
-        <ul class="thumbs" id="thumbs">
-          <li class="thumb" data-thumb>
-            <button type="button" aria-label="Ver o brinde em destaque">
-              <span class="thumb-holder">
-                <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=900&q=80" alt="Taças de vinho brindando durante uma celebração" loading="lazy" width="900" height="900" data-caption="O brinde de abertura, sempre com rótulo da nossa adega">
-              </span>
-            </button>
-          </li>
-          <li class="thumb" data-thumb>
-            <button type="button" aria-label="Ver o jardim em destaque">
-              <span class="thumb-holder">
-                <img src="https://images.unsplash.com/photo-1516541196182-6bdb0516ed27?auto=format&fit=crop&w=900&q=80" alt="Área externa decorada com iluminação cênica ao entardecer" loading="lazy" width="900" height="900" data-caption="O jardim ao entardecer, com iluminação cênica">
-              </span>
-            </button>
-          </li>
-          <li class="thumb" data-thumb>
-            <button type="button" aria-label="Ver a cerimônia em destaque">
-              <span class="thumb-holder">
-                <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=80" alt="Noivos com buquê de flores durante a cerimônia" loading="lazy" width="900" height="900" data-caption="Cerimonial próprio, do ensaio ao último brinde">
-              </span>
-            </button>
-          </li>
-          <li class="thumb" data-thumb>
-            <button type="button" aria-label="Ver um prato do cardápio em destaque">
-              <span class="thumb-holder">
-                <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=900&q=80" alt="Prato do cardápio da casa montado com ingredientes frescos" loading="lazy" width="900" height="900" data-caption="Tudo sai da nossa cozinha — nada é terceirizado">
-              </span>
-            </button>
-          </li>
-          <li class="thumb" data-thumb>
-            <button type="button" aria-label="Ver o salão de jantar em destaque">
-              <span class="thumb-holder">
-                <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=900&q=80" alt="Salão de jantar com mesas postas e luz baixa" loading="lazy" width="900" height="900" data-caption="Salão de jantar para grupos menores, até 40 lugares">
-              </span>
-            </button>
-          </li>
-        </ul>
-
-        <p class="gallery-caption" id="galleryCaption">O salão principal, montado para 180 convidados</p>
-      </div>
-
-      <blockquote class="casa-quote" data-reveal>
-        <p>“Cada prato que sai da nossa cozinha carrega uma intenção: fazer alguém parar de falar por um segundo.”</p>
-        <cite>Direção Gastronômica, Casa Fabbrica</cite>
-      </blockquote>
+    <div class="split__text">
+      <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span>Diferenciais</p>
+      <h2 id="dif-titulo" data-reveal>Nada terceirizado. Tudo sai da nossa cozinha.</h2>
+      <p class="split__lede" data-reveal>Equipe própria de cozinha, salão e sommelier — sem intermediários. A adega privativa reúne rótulos nacionais e importados, harmonizados prato a prato por quem acompanha o evento do início ao fim.</p>
+      <ul class="split__list" data-reveal>
+        <li>Equipe própria de cozinha, salão e cerimonial</li>
+        <li>Adega privativa com harmonização por sommelier</li>
+        <li>Degustação guiada antes da confirmação do menu</li>
+        <li>Mais de uma década conduzindo eventos em família</li>
+      </ul>
+      <a href="#reserva" class="split__link" data-reveal>Falar com a equipe<span aria-hidden="true"> →</span></a>
     </div>
   </section>
 
   <!-- ============================ DEPOIMENTOS ============================ -->
-  <section class="vozes" id="depoimentos" aria-labelledby="vozes-titulo">
+  <section class="quotes" id="depoimentos" aria-labelledby="quotes-titulo">
     <div class="shell">
-      <h2 id="vozes-titulo" class="vozes-title" data-reveal>Não prometemos perfeição — <em>comprovamos cuidado</em>.</h2>
-      <div class="vozes-grid">
-        <figure class="voz" data-reveal>
-          <blockquote><p>Nosso casamento tinha 220 convidados e pareceu um jantar de família. A equipe cuidou de cada detalhe, do brinde à última taça.</p></blockquote>
-          <figcaption><span class="voz-name">Marina Tavares</span><span class="voz-role">Noiva · casamento em outubro</span></figcaption>
-        </figure>
-        <figure class="voz" data-reveal>
-          <blockquote><p>Contratamos para o evento de fim de ano da empresa e recebi elogios de todos os diretores. O menu harmonizado surpreendeu.</p></blockquote>
-          <figcaption><span class="voz-name">Rafael Costa</span><span class="voz-role">Diretor de RH · evento corporativo</span></figcaption>
-        </figure>
-      </div>
+      <p class="eyebrow eyebrow--center"><span class="eyebrow-dot" aria-hidden="true"></span>Depoimentos</p>
+      <h2 id="quotes-titulo" class="quotes__title" data-reveal>Não prometemos perfeição — comprovamos cuidado.</h2>
+    </div>
+
+    <div class="quote-stack">
+      <blockquote class="quote-item" data-voz>
+        <p>“Nosso casamento tinha 220 convidados e pareceu um jantar de família. A equipe cuidou de cada detalhe, do brinde à última taça.”</p>
+        <cite><span class="quote-item__name">Marina Tavares</span><span class="quote-item__role">Noiva · casamento em outubro</span></cite>
+      </blockquote>
+      <blockquote class="quote-item" data-voz>
+        <p>“Contratamos para o evento de fim de ano da empresa e recebi elogios de todos os diretores. O menu harmonizado surpreendeu a todos.”</p>
+        <cite><span class="quote-item__name">Rafael Costa</span><span class="quote-item__role">Diretor de RH · evento corporativo</span></cite>
+      </blockquote>
+      <blockquote class="quote-item" data-voz>
+        <p>“A degustação já mostrou o nível. No dia do evento, cada prato saiu no tempo certo, quente, exatamente como provamos meses antes.”</p>
+        <cite><span class="quote-item__name">Beatriz e Otávio</span><span class="quote-item__role">Noivos · casamento em março</span></cite>
+      </blockquote>
     </div>
   </section>
 
-  <!-- ============================ CONTATO ============================ -->
-  <section class="contato" id="contato" aria-labelledby="contato-titulo">
-    <div class="shell contato-grid">
-      <div class="contato-copy">
-        <p class="eyebrow eyebrow-light"><span class="eyebrow-dot" aria-hidden="true"></span>Orçamento sem compromisso</p>
-        <h2 id="contato-titulo" data-reveal>Conte-nos a data. <em>Cuidamos do resto.</em></h2>
-        <p class="script-note contato-note">respondemos em 24h, de verdade</p>
-        <ul class="contato-list" data-reveal>
-          <li>Visita guiada ao espaço e à adega</li>
-          <li>Degustação para até 4 pessoas</li>
-          <li>Proposta detalhada em até 24h</li>
-        </ul>
-      </div>
+  <!-- ============================ RESERVA ============================ -->
+  <section class="reserve" id="reserva" aria-labelledby="reserve-titulo">
+    <div class="shell reserve__inner">
+      <p class="eyebrow eyebrow--light eyebrow--center"><span class="eyebrow-dot" aria-hidden="true"></span>Orçamento sem compromisso</p>
+      <h2 id="reserve-titulo" data-reveal>Conte-nos a data.<br>Cuidamos do resto.</h2>
+      <p class="reserve__lede" data-reveal>Fale agora com a nossa equipe pelo WhatsApp e receba uma proposta detalhada em até 24 horas — com visita ao espaço e degustação incluídas.</p>
 
-      <form class="form" id="quoteForm" action="#" method="post" novalidate data-reveal>
-        <h3 class="form-title">Solicitar orçamento</h3>
+      <a class="reserve__cta" data-reveal
+         href="https://wa.me/5511987654321?text=Ol%C3%A1!%20Quero%20reservar%20para%20um%20evento%20na%20Casa%20Fabbrica"
+         target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.05-1.36A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3 .8.8-2.93-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.13c-.24-.12-1.44-.71-1.67-.79-.22-.08-.38-.12-.55.12-.16.24-.63.79-.77.95-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.94-1.2-.72-.64-1.2-1.43-1.35-1.67-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.42-.55-.42h-.47c-.16 0-.42.06-.64.3-.22.24-.85.83-.85 2.03 0 1.2.87 2.35 1 2.51.12.16 1.7 2.6 4.13 3.64.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.44-.59 1.64-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28Z"/></svg>
+        Reserve seu evento
+      </a>
 
-        <div class="field">
-          <label for="nome">Nome completo <span aria-hidden="true">*</span></label>
-          <input type="text" id="nome" name="nome" autocomplete="name" required>
-        </div>
-
-        <div class="field">
-          <label for="telefone">Telefone / WhatsApp <span aria-hidden="true">*</span></label>
-          <input type="tel" id="telefone" name="telefone" autocomplete="tel" required>
-        </div>
-
-        <div class="field">
-          <label for="email">E-mail</label>
-          <input type="email" id="email" name="email" autocomplete="email" placeholder="voce@exemplo.com.br">
-        </div>
-
-        <div class="field-pair">
-          <div class="field">
-            <label for="tipo-evento">Tipo de evento</label>
-            <select id="tipo-evento" name="tipo-evento">
-              <option value="">Selecione</option>
-              <option value="casamento">Casamento</option>
-              <option value="corporativo">Evento corporativo</option>
-              <option value="aniversario">Aniversário / celebração</option>
-              <option value="degustacao">Degustação</option>
-              <option value="outro">Outro</option>
-            </select>
-          </div>
-          <div class="field">
-            <label for="data-evento">Data prevista</label>
-            <input type="date" id="data-evento" name="data-evento">
-          </div>
-        </div>
-
-        <div class="field">
-          <label for="convidados">Número de convidados</label>
-          <input type="number" id="convidados" name="convidados" min="1" inputmode="numeric" placeholder="Ex: 120">
-        </div>
-
-        <button type="submit" class="btn btn-primary btn-block" data-magnetic>Enviar solicitação</button>
-        <p class="form-note" role="status" aria-live="polite" id="formNote">Ao enviar, você concorda com nossa <a href="#">Política de Privacidade</a>. Sem spam, sem ligação insistente.</p>
-      </form>
+      <dl class="reserve__meta" data-reveal>
+        <div><dt>Endereço</dt><dd>Rua das Palmeiras, 482 — Jardim Europa, São Paulo/SP</dd></div>
+        <div><dt>Horário</dt><dd>Terça a domingo, 12h às 23h</dd></div>
+        <div><dt>E-mail</dt><dd>eventos@casafabbrica.com.br</dd></div>
+      </dl>
     </div>
   </section>
 
@@ -414,41 +194,32 @@
 
 <!-- ============================ FOOTER ============================ -->
 <footer class="site-footer">
-  <div class="shell footer-top">
+  <div class="shell footer-inner">
     <div class="footer-brand">
-      <a href="#topo" class="logo" aria-label="Casa Fabbrica — início">
-        <span class="logo-mark" aria-hidden="true">
-          <svg viewBox="0 0 32 32" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <a href="#topo" class="brand" aria-label="Casa Fabbrica — início">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="22" height="22" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="16" cy="16" r="15" stroke="currentColor" stroke-width="1.3"/>
             <path d="M16 9c-2.6 0-4.6 1.9-4.6 4.3 0 2 1.4 3.7 3.3 4.1v3.4h-2.1v1.4h4.9v-1.4h-2.1v-3.4c1.9-.4 3.3-2.1 3.3-4.1C20.6 10.9 18.6 9 16 9Z" fill="currentColor"/>
           </svg>
         </span>
-        <span class="logo-text">Casa <em>Fabbrica</em></span>
+        <span class="brand-text">Casa <em>Fabbrica</em></span>
       </a>
       <p class="footer-tagline">Eventos e gastronomia de autor — buffet, adega privativa e um espaço pensado para celebrações que merecem ser lembradas.</p>
       <div class="footer-social">
         <a href="#" aria-label="Casa Fabbrica no Instagram"><svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M12 2.2c2.7 0 3 .01 4.1.06 1.05.05 1.79.22 2.43.47.66.26 1.22.6 1.77 1.16.55.55.9 1.11 1.16 1.77.25.64.42 1.38.47 2.43.05 1.1.06 1.4.06 4.1s-.01 3-.06 4.1c-.05 1.05-.22 1.79-.47 2.43a4.9 4.9 0 0 1-1.16 1.77 4.9 4.9 0 0 1-1.77 1.16c-.64.25-1.38.42-2.43.47-1.1.05-1.4.06-4.1.06s-3-.01-4.1-.06c-1.05-.05-1.79-.22-2.43-.47a4.9 4.9 0 0 1-1.77-1.16 4.9 4.9 0 0 1-1.16-1.77c-.25-.64-.42-1.38-.47-2.43C2.21 15 2.2 14.7 2.2 12s.01-3 .06-4.1c.05-1.05.22-1.79.47-2.43.26-.66.6-1.22 1.16-1.77A4.9 4.9 0 0 1 5.66 2.53c.64-.25 1.38-.42 2.43-.47C9.2 2.01 9.5 2 12.2 2Zm0 1.8c-2.65 0-2.96.01-4.01.06-.86.04-1.32.18-1.63.3-.41.16-.7.35-1.01.66-.31.31-.5.6-.66 1.01-.12.31-.26.77-.3 1.63C4.54 8.51 4.53 8.82 4.53 11.47v1c0 2.65.01 2.96.06 4.01.04.86.18 1.32.3 1.63.16.41.35.7.66 1.01.31.31.6.5 1.01.66.31.12.77.26 1.63.3 1.05.05 1.36.06 4.01.06s2.96-.01 4.01-.06c.86-.04 1.32-.18 1.63-.3.41-.16.7-.35 1.01-.66.31-.31.5-.6.66-1.01.12-.31.26-.77.3-1.63.05-1.05.06-1.36.06-4.01v-1c0-2.65-.01-2.96-.06-4.01-.04-.86-.18-1.32-.3-1.63a2.7 2.7 0 0 0-.66-1.01 2.7 2.7 0 0 0-1.01-.66c-.31-.12-.77-.26-1.63-.3-1.05-.05-1.36-.06-4.01-.06Zm0 3.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9Zm0 1.8a2.7 2.7 0 1 0 0 5.4 2.7 2.7 0 0 0 0-5.4Zm5.72-2a1.05 1.05 0 1 1-2.1 0 1.05 1.05 0 0 1 2.1 0Z"/></svg></a>
-        <a href="#" aria-label="Casa Fabbrica no WhatsApp"><svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.05-1.36A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3 .8.8-2.93-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.13c-.24-.12-1.44-.71-1.67-.79-.22-.08-.38-.12-.55.12-.16.24-.63.79-.77.95-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.94-1.2-.72-.64-1.2-1.43-1.35-1.67-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.42-.55-.42h-.47c-.16 0-.42.06-.64.3-.22.24-.85.83-.85 2.03 0 1.2.87 2.35 1 2.51.12.16 1.7 2.6 4.13 3.64.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.44-.59 1.64-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28Z"/></svg></a>
         <a href="#" aria-label="Casa Fabbrica no Facebook"><svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.5h2.5l.4-3H13.5V8.5c0-.9.25-1.5 1.55-1.5H16.5V4.35A20 20 0 0 0 14.3 4.2c-2.18 0-3.67 1.33-3.67 3.77V10.5H8.1v3h2.53V21h2.87Z"/></svg></a>
       </div>
     </div>
 
     <div class="footer-links">
       <div class="footer-col">
-        <h3>Cardápio</h3>
+        <h3>Explorar</h3>
         <ul>
-          <li><a href="#cardapio">Couvert da Casa</a></li>
-          <li><a href="#cardapio">Buffet Completo</a></li>
-          <li><a href="#cardapio">Adega Privativa</a></li>
-          <li><a href="#cardapio">Degustação Guiada</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h3>A Casa</h3>
-        <ul>
-          <li><a href="#a-casa">Sobre a Casa</a></li>
+          <li><a href="#cardapio">Cardápio</a></li>
+          <li><a href="#a-casa">A Casa</a></li>
+          <li><a href="#diferenciais">Diferenciais</a></li>
           <li><a href="#depoimentos">Depoimentos</a></li>
-          <li><a href="#contato">Orçamento</a></li>
         </ul>
       </div>
       <div class="footer-col footer-contact">
@@ -464,14 +235,12 @@
 
   <div class="shell footer-bottom">
     <p>&copy; <span id="ano">2026</span> Casa Fabbrica. Todos os direitos reservados.</p>
-    <p class="script-note">feito para celebrações que pedem cuidado</p>
+    <p class="footer-signature">feito para celebrações que pedem cuidado</p>
   </div>
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/Flip.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollToPlugin.min.js"></script>
 <script src="js/script.js"></script>
 </body>
 </html>

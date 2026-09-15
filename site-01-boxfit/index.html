@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>IronCage Boxing &amp; Performance — Academia de Boxe, Muay Thai, Jiu-Jitsu e MMA</title>
-<meta name="description" content="IronCage Boxing & Performance: academia de boxe, muay thai, jiu-jitsu, MMA e cross training. Treino sério, estrutura completa e time de treinadores de elite. Agende sua aula experimental grátis.">
+<meta name="description" content="IronCage Boxing & Performance: academia de boxe, muay thai, jiu-jitsu, MMA, cross training e kids. Treino sério, estrutura completa e time de treinadores de elite. Agende sua aula experimental grátis.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,31 +28,27 @@
       <ul>
         <li><a href="#hero">Início</a></li>
         <li><a href="#modalidades">Modalidades</a></li>
-        <li><a href="#treinadores">Treinadores</a></li>
-        <li><a href="#planos">Planos</a></li>
         <li><a href="#depoimentos">Depoimentos</a></li>
+        <li><a href="#planos">Planos</a></li>
         <li><a href="#contato">Contato</a></li>
       </ul>
     </nav>
 
     <div class="header-actions">
-      <a href="#contato" class="btn btn-accent btn-sm">Aula Experimental Grátis</a>
+      <a href="#contato" class="btn btn-accent btn-sm">Aula Grátis</a>
       <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">
         <span></span><span></span><span></span>
       </button>
     </div>
   </div>
 
-  <div class="mobile-menu" id="mobile-menu" hidden>
+  <div class="mobile-menu" id="mobile-menu">
     <nav aria-label="Navegação móvel">
       <ul>
         <li><a href="#hero">Início</a></li>
         <li><a href="#modalidades">Modalidades</a></li>
-        <li><a href="#treinadores">Treinadores</a></li>
-        <li><a href="#horarios">Horários</a></li>
-        <li><a href="#planos">Planos</a></li>
         <li><a href="#depoimentos">Depoimentos</a></li>
-        <li><a href="#faq">Dúvidas</a></li>
+        <li><a href="#planos">Planos</a></li>
         <li><a href="#contato">Contato</a></li>
       </ul>
       <a href="#contato" class="btn btn-accent btn-block">Aula Experimental Grátis</a>
@@ -70,332 +66,206 @@
     </div>
 
     <div class="container hero-content">
-      <p class="eyebrow">Academia de Boxe &amp; Performance — Zona Sul, São Paulo</p>
-      <h1 class="hero-title">DISCIPLINA<br>QUE VIRA<br><span class="accent-text">PODER.</span></h1>
-      <p class="hero-lead">Boxe, Muay Thai, Jiu-Jitsu, MMA e Cross Training num só endereço. Treino técnico, estrutura de verdade e uma equipe que não deixa você desistir no dia difícil.</p>
+      <p class="hero-eyebrow">Academia de Boxe &amp; Performance — Zona Sul, São Paulo</p>
+      <h1 class="hero-title">
+        <span class="line-wrap"><span class="line">TREINO PESADO.</span></span>
+        <span class="line-wrap"><span class="line accent-text">RESULTADO REAL.</span></span>
+      </h1>
+      <p class="hero-lead">Boxe, Muay Thai, Jiu-Jitsu, MMA, Cross Training e Kids num só endereço. Sem enrolação, sem treino genérico — só técnica, intensidade e uma equipe que não deixa você parar no dia difícil.</p>
       <div class="hero-cta">
         <a href="#contato" class="btn btn-accent btn-lg">Agende sua aula grátis</a>
-        <a href="#sobre" class="btn btn-ghost btn-lg">Conheça a estrutura</a>
+        <a href="#modalidades" class="btn btn-ghost btn-lg">Ver modalidades</a>
       </div>
     </div>
 
-    <div class="hero-scroll" aria-hidden="true"><span></span>ROLE PARA BAIXO</div>
+    <a href="#modalidades" class="hero-scroll-cue" aria-label="Rolar até as modalidades">
+      <span class="hero-scroll-line" aria-hidden="true"></span>
+      ROLE
+    </a>
   </section>
 
-  <!-- ========== STATS ========== -->
-  <section class="stats" id="stats" aria-label="Números da IronCage">
-    <div class="container stats-grid">
-      <div class="stat-item">
-        <span class="stat-number" data-count="14" data-suffix="">0</span>
-        <span class="stat-label">Anos de tradição</span>
+  <!-- ========== MODALIDADES — grid horizontal com scroll-snap ========== -->
+  <section class="services" id="modalidades">
+    <div class="container services-head">
+      <div class="services-head-text">
+        <p class="section-eyebrow reveal">O que você treina aqui</p>
+        <h2 class="section-title reveal">SEIS MODALIDADES.<br>UM SÓ PADRÃO<br class="mob-only"> DE INTENSIDADE.</h2>
       </div>
-      <div class="stat-item">
-        <span class="stat-number" data-count="850" data-suffix="+">0</span>
-        <span class="stat-label">Alunos ativos</span>
-      </div>
-      <div class="stat-item">
-        <span class="stat-number" data-count="32" data-suffix="">0</span>
-        <span class="stat-label">Lutadores formados</span>
-      </div>
-      <div class="stat-item">
-        <span class="stat-number" data-count="6" data-suffix="">0</span>
-        <span class="stat-label">Modalidades</span>
+      <div class="services-nav" role="group" aria-label="Navegar entre modalidades">
+        <button type="button" class="services-arrow" data-dir="-1" aria-label="Modalidade anterior">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 5 8 12l7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button type="button" class="services-arrow" data-dir="1" aria-label="Próxima modalidade">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
       </div>
     </div>
+
+    <div class="services-scroller" id="servicesScroller" tabindex="0" aria-label="Lista de modalidades — arraste ou role lateralmente">
+      <ul class="services-track" id="servicesTrack">
+
+        <li class="service-card">
+          <p class="service-no">01 <span class="service-tag">Combate em pé</span></p>
+          <div class="service-media"><img src="https://images.unsplash.com/photo-1517438476312-10d79c077509?auto=format&fit=crop&w=900&q=80" alt="Luvas de boxe apoiadas na corda do ringue" loading="lazy"></div>
+          <h3 class="service-title">BOXE</h3>
+          <p class="service-desc">Fundamentos, esquiva, combinações e sparring controlado. Turmas por nível, do zero à competição amadora.</p>
+          <a href="#contato" class="service-link">Quero experimentar <span aria-hidden="true">&rarr;</span></a>
+        </li>
+
+        <li class="service-card">
+          <p class="service-no">02 <span class="service-tag">Oito armas</span></p>
+          <div class="service-media"><img src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&fit=crop&w=900&q=80" alt="Atleta enfaixando as mãos antes do treino de Muay Thai" loading="lazy"></div>
+          <h3 class="service-title">MUAY THAI</h3>
+          <p class="service-desc">Cotovelos, joelhos, clinch e canela forjada em treino progressivo, técnico e seguro desde a primeira aula.</p>
+          <a href="#contato" class="service-link">Quero experimentar <span aria-hidden="true">&rarr;</span></a>
+        </li>
+
+        <li class="service-card">
+          <p class="service-no">03 <span class="service-tag">Solo no chão</span></p>
+          <div class="service-media"><img src="https://images.unsplash.com/photo-1594737625785-a6cbdabd333c?auto=format&fit=crop&w=900&q=80" alt="Atleta se preparando para treino de solo de Jiu-Jitsu" loading="lazy"></div>
+          <h3 class="service-title">JIU-JITSU</h3>
+          <p class="service-desc">Sistema de graduação reconhecido pela CBJJE. Quedas, passagem de guarda e finalizações com faixas-pretas.</p>
+          <a href="#contato" class="service-link">Quero experimentar <span aria-hidden="true">&rarr;</span></a>
+        </li>
+
+        <li class="service-card">
+          <p class="service-no">04 <span class="service-tag">Condicionamento</span></p>
+          <div class="service-media"><img src="https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?auto=format&fit=crop&w=900&q=80" alt="Anilhas e barras em sala de cross training" loading="lazy"></div>
+          <h3 class="service-title">CROSS TRAINING</h3>
+          <p class="service-desc">Força funcional, cardio de alta intensidade e WODs cronometrados. A base física para qualquer luta.</p>
+          <a href="#contato" class="service-link">Quero experimentar <span aria-hidden="true">&rarr;</span></a>
+        </li>
+
+        <li class="service-card">
+          <p class="service-no">05 <span class="service-tag">Luta completa</span></p>
+          <div class="service-media"><img src="https://images.unsplash.com/photo-1585298723682-7115561c51b7?auto=format&fit=crop&w=900&q=80" alt="Lutador de MMA se preparando para o treino" loading="lazy"></div>
+          <h3 class="service-title">MMA</h3>
+          <p class="service-desc">Striking, wrestling e solo integrados. Para quem quer competir ou só entender a luta por inteiro.</p>
+          <a href="#contato" class="service-link">Quero experimentar <span aria-hidden="true">&rarr;</span></a>
+        </li>
+
+        <li class="service-card">
+          <p class="service-no">06 <span class="service-tag">6 a 12 anos</span></p>
+          <div class="service-media"><img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=900&q=80" alt="Ambiente de treino leve e acolhedor para crianças" loading="lazy"></div>
+          <h3 class="service-title">KIDS</h3>
+          <p class="service-desc">Boxe e jiu-jitsu adaptados para crianças: disciplina, coordenação motora e respeito, do jeito lúdico.</p>
+          <a href="#contato" class="service-link">Quero experimentar <span aria-hidden="true">&rarr;</span></a>
+        </li>
+
+      </ul>
+    </div>
+
+    <div class="services-progress" aria-hidden="true"><span class="services-progress-bar" id="servicesProgressBar"></span></div>
   </section>
 
-  <!-- ========== MODALIDADES ========== -->
-  <section class="modalidades section" id="modalidades">
+  <!-- ========== DEPOIMENTOS — carrossel ========== -->
+  <section class="testimonials" id="depoimentos">
     <div class="container">
-      <p class="section-eyebrow">O que treinamos</p>
-      <h2 class="section-title">MODALIDADES<br>PARA TODO<br class="mob-only"> TIPO DE OBJETIVO</h2>
-      <p class="section-lead">Da primeira aula à faixa preta, do combate amador à performance de alto rendimento. Escolha sua trilha — ou treine todas.</p>
+      <p class="section-eyebrow reveal">Quem treina, confirma</p>
+      <h2 class="section-title reveal">RESULTADOS QUE<br><span class="accent-text">FALAM MAIS ALTO.</span></h2>
 
-      <div class="card-grid">
+      <div class="carousel" id="testiCarousel">
+        <div class="carousel-viewport">
+          <ul class="carousel-track" id="testiTrack">
 
-        <article class="prog-card">
-          <p class="prog-no">MODALIDADE 01 <span class="prog-tag">Combate em pé</span></p>
-          <div class="prog-media">
-            <img src="https://images.unsplash.com/photo-1517438476312-10d79c077509?auto=format&fit=crop&w=900&q=80" alt="Luvas de boxe apoiadas em um ringue" loading="lazy">
-          </div>
-          <h3 class="prog-title">BOXE</h3>
-          <p class="prog-desc">Fundamentos, esquiva, combinações e sparring controlado. Turmas por nível, do zero à competição amadora.</p>
-          <a href="#contato" class="prog-link">Quero experimentar <span aria-hidden="true">&rarr;</span></a>
-        </article>
+            <li class="testi-slide">
+              <figure>
+                <blockquote>
+                  <p>&ldquo;Entrei sem nunca ter dado um soco na vida, com medo de apanhar e de não aguentar o ritmo. Oito meses depois faço sparring técnico e emagreci 11kg sem dieta restritiva.&rdquo;</p>
+                </blockquote>
+                <figcaption>
+                  <strong>Marcos Vinícius Ferreira</strong>
+                  <span>Aluno de Boxe há 2 anos</span>
+                </figcaption>
+              </figure>
+            </li>
 
-        <article class="prog-card">
-          <p class="prog-no">MODALIDADE 02 <span class="prog-tag">Arte suave</span></p>
-          <div class="prog-media">
-            <img src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&fit=crop&w=900&q=80" alt="Atleta enfaixando as mãos antes do treino" loading="lazy">
-          </div>
-          <h3 class="prog-title">MUAY THAI</h3>
-          <p class="prog-desc">A arte das oito armas. Cotovelos, joelhos, clinch e canela forjada em treino progressivo e seguro.</p>
-          <a href="#contato" class="prog-link">Quero experimentar <span aria-hidden="true">&rarr;</span></a>
-        </article>
+            <li class="testi-slide">
+              <figure>
+                <blockquote>
+                  <p>&ldquo;O que mais me prendeu foi a atenção nos detalhes: postura de clinch, distância, respiração. Não é academia de treino genérico — cada professor enxerga onde você está travado.&rdquo;</p>
+                </blockquote>
+                <figcaption>
+                  <strong>Juliana Prado</strong>
+                  <span>Aluna de Muay Thai</span>
+                </figcaption>
+              </figure>
+            </li>
 
-        <article class="prog-card">
-          <p class="prog-no">MODALIDADE 03 <span class="prog-tag">Solo no chão</span></p>
-          <div class="prog-media">
-            <img src="https://images.unsplash.com/photo-1594737625785-a6cbdabd333c?auto=format&fit=crop&w=900&q=80" alt="Atleta se preparando para treino de solo" loading="lazy">
-          </div>
-          <h3 class="prog-title">JIU-JITSU</h3>
-          <p class="prog-desc">Sistema de graduação reconhecido pela CBJJE. Quedas, passagem de guarda e finalizações com faixas-pretas.</p>
-          <a href="#contato" class="prog-link">Quero experimentar <span aria-hidden="true">&rarr;</span></a>
-        </article>
+            <li class="testi-slide">
+              <figure>
+                <blockquote>
+                  <p>&ldquo;Meu filho de 8 anos era extremamente disperso. Na IronCage Kids ele aprendeu a esperar a vez, respeitar o colega de treino e hoje pede pra ir três vezes por semana.&rdquo;</p>
+                </blockquote>
+                <figcaption>
+                  <strong>Eduardo Salles</strong>
+                  <span>Pai de aluno da turma Kids</span>
+                </figcaption>
+              </figure>
+            </li>
 
-        <article class="prog-card">
-          <p class="prog-no">MODALIDADE 04 <span class="prog-tag">Condicionamento</span></p>
-          <div class="prog-media">
-            <img src="https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?auto=format&fit=crop&w=900&q=80" alt="Anilhas e barras em sala de cross training" loading="lazy">
-          </div>
-          <h3 class="prog-title">CROSS TRAINING</h3>
-          <p class="prog-desc">Força funcional, cardio de alta intensidade e WODs cronometrados. A base física para qualquer luta.</p>
-          <a href="#contato" class="prog-link">Quero experimentar <span aria-hidden="true">&rarr;</span></a>
-        </article>
+            <li class="testi-slide">
+              <figure>
+                <blockquote>
+                  <p>&ldquo;Cheguei faixa branca sem nenhuma base e o professor nunca deixou eu me sentir por fora. Hoje sou faixa roxa e ajudo os novatos exatamente como me ajudaram.&rdquo;</p>
+                </blockquote>
+                <figcaption>
+                  <strong>Patrícia Menezes</strong>
+                  <span>Aluna de Jiu-Jitsu, faixa roxa</span>
+                </figcaption>
+              </figure>
+            </li>
 
-        <article class="prog-card">
-          <p class="prog-no">MODALIDADE 05 <span class="prog-tag">Luta completa</span></p>
-          <div class="prog-media">
-            <img src="https://images.unsplash.com/photo-1585298723682-7115561c51b7?auto=format&fit=crop&w=900&q=80" alt="Lutador de MMA se preparando para o treino" loading="lazy">
-          </div>
-          <h3 class="prog-title">MMA</h3>
-          <p class="prog-desc">Striking, wrestling e solo integrados. Para quem quer competir ou só entender a luta por inteiro.</p>
-          <a href="#contato" class="prog-link">Quero experimentar <span aria-hidden="true">&rarr;</span></a>
-        </article>
+            <li class="testi-slide">
+              <figure>
+                <blockquote>
+                  <p>&ldquo;Treino MMA há 1 ano e nunca me senti tão forte. A estrutura é completa, os horários encaixam na minha rotina e o nível técnico é muito acima do que eu esperava.&rdquo;</p>
+                </blockquote>
+                <figcaption>
+                  <strong>Rodrigo Almeida</strong>
+                  <span>Aluno de MMA</span>
+                </figcaption>
+              </figure>
+            </li>
 
-        <article class="prog-card">
-          <p class="prog-no">MODALIDADE 06 <span class="prog-tag">6 a 12 anos</span></p>
-          <div class="prog-media">
-            <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=900&q=80" alt="Ambiente de treino leve e acolhedor para crianças" loading="lazy">
-          </div>
-          <h3 class="prog-title">KIDS</h3>
-          <p class="prog-desc">Boxe e jiu-jitsu adaptados para crianças: disciplina, coordenação motora e respeito, do jeito lúdico.</p>
-          <a href="#contato" class="prog-link">Quero experimentar <span aria-hidden="true">&rarr;</span></a>
-        </article>
+          </ul>
+        </div>
 
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== SOBRE ========== -->
-  <section class="about section" id="sobre">
-    <div class="container about-grid">
-      <div class="about-media">
-        <img src="https://images.unsplash.com/photo-1583473848882-f9a5bc7fd2ee?auto=format&fit=crop&w=1000&q=80" alt="Ringue e estrutura de treino da academia IronCage" loading="lazy">
-        <div class="about-media-badge">
-          <strong>14</strong>
-          <span>anos formando atletas e amadores em São Paulo</span>
+        <div class="carousel-controls">
+          <button type="button" class="carousel-arrow" data-dir="-1" aria-label="Depoimento anterior">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 5 8 12l7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="carousel-dots" id="testiDots" role="tablist" aria-label="Selecionar depoimento"></div>
+          <button type="button" class="carousel-arrow" data-dir="1" aria-label="Próximo depoimento">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
         </div>
       </div>
-      <div class="about-content">
-        <p class="section-eyebrow">Por dentro da IronCage</p>
-        <h2 class="section-title">NÃO É SOBRE<br>TALENTO. É SOBRE<br><span class="accent-text">QUEM VOLTA</span> AMANHÃ.</h2>
-        <p class="about-text">Abrimos em 2012 num galpão de 300m² com um ringue e muita vontade. Hoje são 1.400m² de estrutura e uma equipe que já defendeu o Brasil dentro e fora do país — mas o princípio não mudou: turma pequena, treinador que corrige sua guarda e plano pensado pra durar mais que um mês de motivação.</p>
+    </div>
+  </section>
 
-        <ul class="diff-list">
-          <li>
-            <span class="diff-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none"><path d="M12 2 4 6v6c0 5 3.4 8.7 8 10 4.6-1.3 8-5 8-10V6l-8-4Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
-            </span>
-            <div>
-              <h3>Estrutura completa</h3>
-              <p>Ringue oficial, tatame com 220m² para solo e sala de cross training climatizada.</p>
-            </div>
-          </li>
-          <li>
-            <span class="diff-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.35-9.5-9C.5 7.5 3 3.5 7 3.5c2 0 3.5 1 5 3 1.5-2 3-3 5-3 4 0 6.5 4 4.5 8.5C19 16.65 12 21 12 21Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
-            </span>
-            <div>
-              <h3>Treinadores de elite</h3>
-              <p>Faixas-pretas e ex-atletas dando aula todos os dias — não só em workshop.</p>
-            </div>
-          </li>
-          <li>
-            <span class="diff-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none"><path d="M4 20V10M12 20V4M20 20v-7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-            </span>
-            <div>
-              <h3>Turmas por nível</h3>
-              <p>Iniciante, intermediário e avançado separados — você nunca treina fora do seu ritmo.</p>
-            </div>
-          </li>
+  <!-- ========== FINAL — estrutura/planos ========== -->
+  <section class="finale" id="planos">
+    <div class="container">
+      <div class="finale-intro">
+        <p class="section-eyebrow reveal">Por dentro da IronCage</p>
+        <h2 class="section-title reveal">NÃO É SOBRE TALENTO.<br>É SOBRE <span class="accent-text">QUEM VOLTA</span> AMANHÃ.</h2>
+        <p class="section-lead reveal">Abrimos em 2012 num galpão de 300m² com um ringue e muita vontade. Hoje são 1.400m² de estrutura e uma equipe que já defendeu o Brasil dentro e fora do país — mas o princípio não mudou: turma pequena e treinador que corrige sua guarda.</p>
+
+        <ul class="finale-badges reveal">
+          <li><strong>14</strong> anos de tradição</li>
+          <li><strong>6</strong> modalidades</li>
+          <li><strong>1.400m²</strong> de estrutura</li>
+          <li><strong>850+</strong> alunos ativos</li>
         </ul>
       </div>
-    </div>
-  </section>
 
-  <!-- ========== TREINADORES ========== -->
-  <section class="coaches section" id="treinadores">
-    <div class="container">
-      <p class="section-eyebrow">Quem te leva junto</p>
-      <h2 class="section-title">A EQUIPE POR<br>TRÁS DO SEU<br><span class="accent-text">PRÓXIMO NÍVEL</span></h2>
-
-      <div class="coach-grid">
-        <article class="coach-card">
-          <div class="coach-photo">
-            <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=700&q=80" alt="Retrato de Rafael Duarte, treinador de boxe" loading="lazy">
-          </div>
-          <h3 class="coach-name">Rafael Duarte</h3>
-          <p class="coach-role">Head Coach &middot; Boxe</p>
-          <p class="coach-bio">15 anos de tapete, ex-atleta do time amador paulista. Especialista em base técnica e correção de guarda para iniciantes.</p>
-        </article>
-
-        <article class="coach-card">
-          <div class="coach-photo">
-            <img src="https://images.unsplash.com/photo-1552058544-f2b08422138a?auto=format&fit=crop&w=700&q=80" alt="Retrato de Bianca Rocha, treinadora de Muay Thai" loading="lazy">
-          </div>
-          <h3 class="coach-name">Bianca Rocha</h3>
-          <p class="coach-role">Muay Thai &middot; Cross Training</p>
-          <p class="coach-bio">Campeã estadual em 2019, hoje comanda as turmas de Muay Thai e monta os WODs de condicionamento da casa.</p>
-        </article>
-
-        <article class="coach-card">
-          <div class="coach-photo">
-            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=700&q=80" alt="Retrato de Thiago Nakamura, treinador de Jiu-Jitsu" loading="lazy">
-          </div>
-          <h3 class="coach-name">Thiago Nakamura</h3>
-          <p class="coach-role">Jiu-Jitsu &middot; Faixa-preta 3º grau</p>
-          <p class="coach-bio">Formado sob a linhagem Gracie Barra, já graduou mais de 40 faixas. Conduz as avaliações de graduação da IronCage.</p>
-        </article>
-
-        <article class="coach-card">
-          <div class="coach-photo">
-            <img src="https://images.unsplash.com/photo-1571908599407-cdb918ed83bf?auto=format&fit=crop&w=700&q=80" alt="Retrato de Camila Torres, treinadora de MMA e turma Kids" loading="lazy">
-          </div>
-          <h3 class="coach-name">Camila Torres</h3>
-          <p class="coach-role">MMA &middot; Kids</p>
-          <p class="coach-bio">Ex-atleta amadora de MMA, hoje une striking e solo nas turmas adultas e comanda a IronCage Kids com muita paciência.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== HORÁRIOS ========== -->
-  <section class="schedule section" id="horarios">
-    <div class="container">
-      <p class="section-eyebrow">Organize sua semana</p>
-      <h2 class="section-title">GRADE DE<br>HORÁRIOS</h2>
-      <p class="section-lead">Treinos de segunda a sábado, de madrugada ao início da noite. Encontre o horário que cabe na sua rotina.</p>
-
-      <div class="table-wrap">
-        <table class="schedule-table">
-          <caption class="sr-only">Grade semanal de horários por modalidade</caption>
-          <thead>
-            <tr>
-              <th scope="col">Horário</th>
-              <th scope="col">Segunda</th>
-              <th scope="col">Terça</th>
-              <th scope="col">Quarta</th>
-              <th scope="col">Quinta</th>
-              <th scope="col">Sexta</th>
-              <th scope="col">Sábado</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">06:00–07:00</th>
-              <td><span class="tag tag-cross">Cross Training</span></td>
-              <td><span class="tag tag-boxe">Boxe</span></td>
-              <td><span class="tag tag-cross">Cross Training</span></td>
-              <td><span class="tag tag-boxe">Boxe</span></td>
-              <td><span class="tag tag-cross">Cross Training</span></td>
-              <td><span class="tag tag-jj">Jiu-Jitsu</span></td>
-            </tr>
-            <tr>
-              <th scope="row">07:00–08:00</th>
-              <td><span class="tag tag-boxe">Boxe</span></td>
-              <td><span class="tag tag-mt">Muay Thai</span></td>
-              <td><span class="tag tag-boxe">Boxe</span></td>
-              <td><span class="tag tag-mt">Muay Thai</span></td>
-              <td><span class="tag tag-boxe">Boxe</span></td>
-              <td>—</td>
-            </tr>
-            <tr>
-              <th scope="row">18:00–19:00</th>
-              <td><span class="tag tag-kids">Kids Boxe</span></td>
-              <td><span class="tag tag-kids">Kids Muay Thai</span></td>
-              <td><span class="tag tag-kids">Kids Jiu-Jitsu</span></td>
-              <td><span class="tag tag-kids">Kids Boxe</span></td>
-              <td><span class="tag tag-kids">Kids Muay Thai</span></td>
-              <td>—</td>
-            </tr>
-            <tr>
-              <th scope="row">19:00–20:00</th>
-              <td><span class="tag tag-boxe">Boxe</span></td>
-              <td><span class="tag tag-mt">Muay Thai</span></td>
-              <td><span class="tag tag-jj">Jiu-Jitsu</span></td>
-              <td><span class="tag tag-mt">Muay Thai</span></td>
-              <td><span class="tag tag-mma">MMA</span></td>
-              <td>—</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <p class="schedule-note">Horários de sábado sujeitos a alteração em feriados prolongados. Consulte a recepção ou fale com a gente pelo WhatsApp.</p>
-    </div>
-  </section>
-
-  <!-- ========== DEPOIMENTOS ========== -->
-  <section class="testimonials section" id="depoimentos">
-    <div class="container">
-      <p class="section-eyebrow">Quem treina, confirma</p>
-      <h2 class="section-title">RESULTADOS QUE<br><span class="accent-text">FALAM MAIS ALTO</span></h2>
-
-      <div class="testi-grid">
-        <figure class="testi-card">
-          <blockquote>
-            <p>&ldquo;Entrei sem nunca ter dado um soco na vida, com medo de apanhar e de não aguentar o ritmo. Oito meses depois faço sparring técnico e emagreci 11kg sem nunca ter feito dieta restritiva.&rdquo;</p>
-          </blockquote>
-          <figcaption>
-            <strong>Marcos Vinícius Ferreira</strong>
-            <span>Aluno de Boxe há 2 anos</span>
-          </figcaption>
-        </figure>
-
-        <figure class="testi-card">
-          <blockquote>
-            <p>&ldquo;O que mais me prendeu foi a atenção nos detalhes: postura de clinch, distância, respiração. Não é academia de treino genérico — cada professor realmente enxerga onde você está travado.&rdquo;</p>
-          </blockquote>
-          <figcaption>
-            <strong>Juliana Prado</strong>
-            <span>Aluna de Muay Thai</span>
-          </figcaption>
-        </figure>
-
-        <figure class="testi-card">
-          <blockquote>
-            <p>&ldquo;Meu filho de 8 anos era extremamente disperso. Na IronCage Kids ele aprendeu a esperar a vez, respeitar o colega de treino e hoje pede pra ir três vezes por semana. Mudou o comportamento dele em casa também.&rdquo;</p>
-          </blockquote>
-          <figcaption>
-            <strong>Eduardo Salles</strong>
-            <span>Pai de aluno da turma Kids</span>
-          </figcaption>
-        </figure>
-
-        <figure class="testi-card">
-          <blockquote>
-            <p>&ldquo;Cheguei faixa branca sem nenhuma base e o professor Thiago nunca deixou eu me sentir por fora. Hoje sou faixa roxa e ajudo os novatos exatamente como me ajudaram.&rdquo;</p>
-          </blockquote>
-          <figcaption>
-            <strong>Patrícia Menezes</strong>
-            <span>Aluna de Jiu-Jitsu, faixa roxa</span>
-          </figcaption>
-        </figure>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== PLANOS ========== -->
-  <section class="pricing section" id="planos">
-    <div class="container">
-      <p class="section-eyebrow">Invista no seu ritmo</p>
-      <h2 class="section-title">PLANOS PARA<br>CADA NÍVEL<br><span class="accent-text">DE COMPROMISSO</span></h2>
-      <p class="section-lead">Sem letra miúda. Sem taxa escondida. Cancele com 30 dias de aviso, sem multa.</p>
+      <p class="section-eyebrow reveal pricing-eyebrow">Invista no seu ritmo</p>
+      <h3 class="pricing-title reveal">PLANOS PARA CADA NÍVEL DE COMPROMISSO</h3>
 
       <div class="pricing-grid">
-        <article class="price-card">
-          <h3 class="price-name">Início</h3>
+        <article class="price-card reveal">
+          <h4 class="price-name">Início</h4>
           <p class="price-desc">Pra quem quer testar o ritmo sem compromisso total.</p>
           <p class="price-value"><span class="currency">R$</span>149<span class="period">/mês</span></p>
           <ul class="price-features">
@@ -407,30 +277,28 @@
           <a href="#contato" class="btn btn-outline btn-block">Quero esse plano</a>
         </article>
 
-        <article class="price-card price-card-featured">
+        <article class="price-card price-card-featured reveal">
           <p class="price-badge">Mais escolhido</p>
-          <h3 class="price-name">Performance</h3>
+          <h4 class="price-name">Performance</h4>
           <p class="price-desc">Acesso livre pra treinar todos os dias, em qualquer modalidade.</p>
           <p class="price-value"><span class="currency">R$</span>219<span class="period">/mês</span></p>
           <ul class="price-features">
             <li>Modalidades ilimitadas</li>
             <li>Treinos livres, todos os horários</li>
             <li>Avaliação física trimestral</li>
-            <li>Desconto em workshops e seminários</li>
             <li>Acesso à sala de Cross Training</li>
           </ul>
           <a href="#contato" class="btn btn-accent btn-block">Quero esse plano</a>
         </article>
 
-        <article class="price-card">
-          <h3 class="price-name">Elite</h3>
+        <article class="price-card reveal">
+          <h4 class="price-name">Elite</h4>
           <p class="price-desc">Para quem treina para competir ou busca performance máxima.</p>
           <p class="price-value"><span class="currency">R$</span>349<span class="period">/mês</span></p>
           <ul class="price-features">
             <li>Tudo do plano Performance</li>
             <li>2 aulas particulares por mês</li>
             <li>Acompanhamento nutricional parceiro</li>
-            <li>Prioridade em vagas de competição</li>
             <li>Kit têxtil IronCage incluso</li>
           </ul>
           <a href="#contato" class="btn btn-outline btn-block">Quero esse plano</a>
@@ -439,95 +307,22 @@
     </div>
   </section>
 
-  <!-- ========== FAQ ========== -->
-  <section class="faq section" id="faq">
-    <div class="container faq-grid">
-      <div class="faq-intro">
-        <p class="section-eyebrow">Antes de bater na porta</p>
-        <h2 class="section-title">PERGUNTAS<br>FREQUENTES</h2>
-        <p class="section-lead">Não achou sua dúvida aqui? Manda mensagem pra gente lá embaixo que respondemos no mesmo dia.</p>
-      </div>
-
-      <div class="accordion" id="accordion">
-        <div class="accordion-item">
-          <h3>
-            <button class="accordion-trigger" aria-expanded="true" aria-controls="faq-1">
-              Preciso ter experiência para começar?
-              <span class="accordion-icon" aria-hidden="true"></span>
-            </button>
-          </h3>
-          <div class="accordion-panel" id="faq-1">
-            <p>Não. A maioria dos nossos alunos começou do zero. Todas as modalidades têm turma de iniciante, com progressão gradual de intensidade e técnica antes de qualquer sparring.</p>
-          </div>
-        </div>
-
-        <div class="accordion-item">
-          <h3>
-            <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-2">
-              Preciso levar equipamento próprio?
-              <span class="accordion-icon" aria-hidden="true"></span>
-            </button>
-          </h3>
-          <div class="accordion-panel" id="faq-2" hidden>
-            <p>Para a aula experimental, emprestamos luvas e bandagens sem custo. Ao se matricular, recomendamos adquirir seu próprio kit (luvas, bandagem e protetor bucal) — temos parceria com lojas locais e preço especial para alunos.</p>
-          </div>
-        </div>
-
-        <div class="accordion-item">
-          <h3>
-            <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-3">
-              Qual a idade mínima para o Boxe Infantil?
-              <span class="accordion-icon" aria-hidden="true"></span>
-            </button>
-          </h3>
-          <div class="accordion-panel" id="faq-3" hidden>
-            <p>A turma Kids recebe crianças de 6 a 12 anos, com foco em coordenação motora, disciplina e fundamentos — sem contato pesado. Acima dos 13 anos, o aluno já pode migrar para as turmas juvenis regulares.</p>
-          </div>
-        </div>
-
-        <div class="accordion-item">
-          <h3>
-            <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-4">
-              Posso experimentar antes de assinar um plano?
-              <span class="accordion-icon" aria-hidden="true"></span>
-            </button>
-          </h3>
-          <div class="accordion-panel" id="faq-4" hidden>
-            <p>Sim, e recomendamos fortemente. A aula experimental é gratuita, sem compromisso, e você pode escolher em qual modalidade quer conhecer a metodologia antes de decidir o plano.</p>
-          </div>
-        </div>
-
-        <div class="accordion-item">
-          <h3>
-            <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-5">
-              Os planos têm fidelidade ou multa de cancelamento?
-              <span class="accordion-icon" aria-hidden="true"></span>
-            </button>
-          </h3>
-          <div class="accordion-panel" id="faq-5" hidden>
-            <p>Não trabalhamos com fidelidade. Basta avisar a recepção com 30 dias de antecedência para cancelar, sem multa e sem burocracia.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== CTA FINAL + CONTATO ========== -->
-  <section class="cta-final" id="contato">
-    <div class="cta-final-media" aria-hidden="true">
+  <!-- ========== CONTATO ========== -->
+  <section class="contact" id="contato">
+    <div class="contact-media" aria-hidden="true">
       <img src="https://images.unsplash.com/photo-1524594152303-9fd13543fe6e?auto=format&fit=crop&w=1900&q=80" alt="" loading="lazy">
-      <div class="cta-final-overlay"></div>
+      <div class="contact-overlay"></div>
     </div>
 
-    <div class="container cta-final-grid">
-      <div class="cta-final-content">
-        <p class="section-eyebrow">Chega de adiar</p>
-        <h2 class="section-title">SUA PRIMEIRA<br>AULA É POR<br><span class="accent-text">CONTA DA CASA.</span></h2>
-        <p class="section-lead">Preencha o formulário e nossa equipe entra em contato em até 1 dia útil para agendar sua aula experimental gratuita, na modalidade que você escolher.</p>
+    <div class="container contact-grid">
+      <div class="contact-content">
+        <p class="section-eyebrow reveal">Chega de adiar</p>
+        <h2 class="section-title reveal">SUA PRIMEIRA AULA<br>É POR <span class="accent-text">CONTA DA CASA.</span></h2>
+        <p class="section-lead reveal">Preencha o formulário e nossa equipe entra em contato em até 1 dia útil para agendar sua aula experimental gratuita, na modalidade que você escolher.</p>
 
-        <ul class="cta-info-list">
+        <ul class="contact-info-list reveal">
           <li>
-            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s-7-4.35-9.5-9C.5 7.5 3 3.5 7 3.5c2 0 3.5 1 5 3 1.5-2 3-3 5-3 4 0 6.5 4 4.5 8.5C19 16.65 12 21 12 21Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
             Sem taxa de matrícula na sua primeira aula
           </li>
           <li>
@@ -539,9 +334,14 @@
             Atendimento humano, sem robô de WhatsApp
           </li>
         </ul>
+
+        <div class="contact-address reveal">
+          <address>Rua dos Lutadores, 482 — Vila Olímpia, São Paulo — SP</address>
+          <p><a href="tel:+551140028922">(11) 4002-8922</a> &middot; <a href="mailto:contato@ironcageboxing.com.br">contato@ironcageboxing.com.br</a></p>
+        </div>
       </div>
 
-      <form class="contact-form" action="#" method="post" novalidate>
+      <form class="contact-form reveal" action="#" method="post" novalidate>
         <h3 class="form-title">Agende sua aula experimental</h3>
 
         <div class="form-field">
@@ -570,7 +370,7 @@
 
         <div class="form-field">
           <label for="mensagem">Mensagem (opcional)</label>
-          <textarea id="mensagem" name="mensagem" rows="4" placeholder="Conte um pouco sobre seu objetivo ou disponibilidade de horário"></textarea>
+          <textarea id="mensagem" name="mensagem" rows="3" placeholder="Conte um pouco sobre seu objetivo ou disponibilidade de horário"></textarea>
         </div>
 
         <button type="submit" class="btn btn-accent btn-block btn-lg">Quero agendar minha aula grátis</button>
@@ -602,7 +402,7 @@
         <a href="#" aria-label="IronCage no YouTube">
           <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2.5" y="6" width="19" height="12" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M10.5 9.5v5l4.5-2.5-4.5-2.5Z" fill="currentColor"/></svg>
         </a>
-        <a href="#" aria-label="IronCage no WhatsApp">
+        <a href="https://wa.me/5511998765432?text=Quero%20come%C3%A7ar%20a%20treinar%20na%20IronCage" aria-label="IronCage no WhatsApp">
           <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.5 17.5 4 20l2.6-.7A8 8 0 1 0 4 12a7.9 7.9 0 0 0 1 3.9l1.5 1.6Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M9 9.6c.2-.6.7-.6 1-.6h.6c.2 0 .5 0 .7.5.3.6.9 1.9.9 2.1s0 .3-.2.5c-.2.3-.4.4-.6.6-.2.2-.4.4-.2.8.2.4 1 1.6 2.1 2.5 1.4 1.2 2 1.3 2.4 1.4.4 0 .6 0 .8-.2s.9-1 1.1-1.4c.2-.3.4-.3.7-.2s2 1 2.3 1.1c.3.2.5.2.6.3 0 .2 0 1-.4 1.9-.4.9-2.2 1.7-3 1.7-.8 0-1.5.1-4.8-1.9-2.6-1.6-4.3-4.4-4.4-4.6-.2-.2-1.2-1.7-1.2-3.2 0-1.5.8-2.2 1.1-2.5Z" fill="currentColor"/></svg>
         </a>
       </div>
@@ -613,11 +413,9 @@
       <ul>
         <li><a href="#hero">Início</a></li>
         <li><a href="#modalidades">Modalidades</a></li>
-        <li><a href="#treinadores">Treinadores</a></li>
-        <li><a href="#horarios">Horários</a></li>
-        <li><a href="#planos">Planos</a></li>
         <li><a href="#depoimentos">Depoimentos</a></li>
-        <li><a href="#faq">Dúvidas</a></li>
+        <li><a href="#planos">Planos</a></li>
+        <li><a href="#contato">Contato</a></li>
       </ul>
     </div>
 
@@ -640,18 +438,6 @@
       </ul>
     </div>
 
-    <div class="footer-map">
-      <h3>Como chegar</h3>
-      <div class="map-embed">
-        <iframe
-          title="Mapa de localização da IronCage Boxing and Performance"
-          src="https://www.google.com/maps?q=Vila+Olimpia+Sao+Paulo&output=embed"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-      </div>
-    </div>
-
   </div>
 
   <div class="container footer-bottom">
@@ -660,8 +446,14 @@
   </div>
 </footer>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<!-- ========== WHATSAPP FLUTUANTE ========== -->
+<a href="https://wa.me/5511998765432?text=Quero%20come%C3%A7ar%20a%20treinar%20na%20IronCage"
+   class="whatsapp-float" id="whatsappFloat" target="_blank" rel="noopener" aria-label="Falar com a IronCage no WhatsApp">
+  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.5 17.5 4 20l2.6-.7A8 8 0 1 0 4 12a7.9 7.9 0 0 0 1 3.9l1.5 1.6Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M9 9.6c.2-.6.7-.6 1-.6h.6c.2 0 .5 0 .7.5.3.6.9 1.9.9 2.1s0 .3-.2.5c-.2.3-.4.4-.6.6-.2.2-.4.4-.2.8.2.4 1 1.6 2.1 2.5 1.4 1.2 2 1.3 2.4 1.4.4 0 .6 0 .8-.2s.9-1 1.1-1.4c.2-.3.4-.3.7-.2s2 1 2.3 1.1c.3.2.5.2.6.3 0 .2 0 1-.4 1.9-.4.9-2.2 1.7-3 1.7-.8 0-1.5.1-4.8-1.9-2.6-1.6-4.3-4.4-4.4-4.6-.2-.2-1.2-1.7-1.2-3.2 0-1.5.8-2.2 1.1-2.5Z" fill="currentColor"/></svg>
+</a>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
 <script src="js/script.js"></script>
 </body>
 </html>

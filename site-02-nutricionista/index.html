@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nutre Bellevie — Nutrição Clínica de Resultado</title>
-<meta name="description" content="Nutre Bellevie: nutrição clínica premium com Dra. Camila Andrade (CRN-3). Emagrecimento sustentável, performance esportiva, saúde hormonal e reeducação alimentar baseada em evidência.">
-<meta name="theme-color" content="#FAF6F0">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='%233E5641'/%3E%3Ccircle cx='50' cy='50' r='27' fill='none' stroke='%23E8967A' stroke-width='6'/%3E%3C/svg%3E">
+<title>Lumière Estética — Clínica de Estética Avançada</title>
+<meta name="description" content="Lumière Estética: clínica de estética avançada em São Paulo. Harmonização facial, bioestimuladores, protocolos corporais e laser conduzidos por especialista, em ambiente autoral e discreto.">
+<meta name="theme-color" content="#F6F1ED">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23211B1E'/%3E%3Cellipse cx='50' cy='50' rx='34' ry='22' fill='none' stroke='%23C9A8B4' stroke-width='4'/%3E%3Cline x1='50' y1='16' x2='50' y2='4' stroke='%23C9A8B4' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -21,9 +21,9 @@
   <nav class="hdr__nav" aria-label="Navegação principal">
     <a href="#topo" class="brand">
       <span class="brand__mark" aria-hidden="true">
-        <svg viewBox="0 0 44 44" width="44" height="44"><circle cx="22" cy="22" r="21" fill="none" stroke="currentColor" stroke-width="1.4" opacity=".35"/><circle cx="22" cy="22" r="12.5" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="22" cy="9.5" r="3.4" fill="var(--coral)"/></svg>
+        <svg viewBox="0 0 60 40" width="46" height="30"><ellipse cx="30" cy="22" rx="21" ry="13" fill="none" stroke="currentColor" stroke-width="1.3"/><line x1="30" y1="9" x2="30" y2="1" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/><line x1="21" y1="12" x2="16" y2="6" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" opacity=".7"/><line x1="39" y1="12" x2="44" y2="6" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" opacity=".7"/></svg>
       </span>
-      <span class="brand__text">Nutre <em>Bellevie</em><small>nutrição clínica</small></span>
+      <span class="brand__text">Lumière<em>Estética</em></span>
     </a>
 
     <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="menu">
@@ -33,13 +33,12 @@
 
     <div class="menu" id="menu">
       <ul class="menu__list">
-        <li><a href="#inicio">Início</a></li>
-        <li><a href="#indicadores">Resultados clínicos</a></li>
-        <li><a href="#programas">Programas</a></li>
-        <li><a href="#metodo">O método</a></li>
-        <li><a href="#historias">Histórias</a></li>
+        <li><a href="#clinica">A clínica</a></li>
+        <li><a href="#tratamentos">Tratamentos</a></li>
+        <li><a href="#resultados">Resultados</a></li>
+        <li><a href="#depoimentos">Depoimentos</a></li>
+        <li><a href="#contato">Contato</a></li>
       </ul>
-      <a href="#agendar" class="btn btn--solid menu__cta">Agendar avaliação</a>
     </div>
   </nav>
 </header>
@@ -48,404 +47,194 @@
 
   <!-- ========================= HERO ========================= -->
   <section class="hero" id="inicio">
-    <div class="orb orb--a" aria-hidden="true"></div>
-    <div class="orb orb--b" aria-hidden="true"></div>
+    <div class="hero__media" aria-hidden="true">
+      <img src="https://images.unsplash.com/photo-1600428877878-1a0fd85beda8?auto=format&amp;fit=crop&amp;w=2000&amp;q=80" alt="" fetchpriority="high">
+      <div class="hero__veil"></div>
+    </div>
 
-    <div class="wrap hero__grid">
-      <div class="hero__copy">
-        <p class="eyebrow"><span class="dot" aria-hidden="true"></span>Nutrição clínica baseada em evidência</p>
-        <h1 class="hero__title">O resultado continua <em>depois</em> que o plano termina.</h1>
-        <p class="lede">
-          Acompanhamento individualizado para emagrecimento, performance e saúde hormonal.
-          Nada de dieta que não cabe na sua semana real — construímos o prato a partir da sua rotina.
+    <div class="hero__content">
+      <p class="eyebrow eyebrow--onmedia"><span class="eyebrow__line" aria-hidden="true"></span>Clínica de estética avançada</p>
+      <h1 class="hero__title" id="heroTitle">A beleza que se revela <em>devagar</em>, com técnica.</h1>
+      <p class="hero__lede">Harmonização facial, bioestimuladores e protocolos corporais conduzidos com critério clínico — num espaço pensado para durar mais que uma tendência.</p>
+    </div>
+
+    <div class="hero__scrollcue" aria-hidden="true">
+      <span class="hero__scrollcue-line"></span>
+      <span class="hero__scrollcue-text">role</span>
+    </div>
+  </section>
+
+  <!-- ========================= A CLÍNICA ========================= -->
+  <section class="sect intro" id="clinica" aria-labelledby="intro-h">
+    <div class="wrap intro__comp">
+      <figure class="oval oval--intro reveal" data-reveal>
+        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&amp;fit=crop&amp;w=1000&amp;q=80" alt="Especialista da Lumière Estética em consultório, retrato em ambiente clínico discreto" loading="lazy" width="1000" height="1250">
+      </figure>
+
+      <div class="intro__copy">
+        <p class="eyebrow reveal" data-reveal><span class="eyebrow__line" aria-hidden="true"></span>A clínica</p>
+        <h2 id="intro-h" class="reveal" data-reveal>Um consultório, uma especialista, um método <em>só seu</em>.</h2>
+        <p class="lede measure reveal" data-reveal>
+          A Lumière nasceu para ser o oposto da estética em série. Cada protocolo é desenhado depois de uma leitura real do seu rosto, da sua pele e do seu histórico — nunca de um menu fixo de procedimentos.
         </p>
-        <div class="hero__actions">
-          <a href="#agendar" class="btn btn--solid">Agendar avaliação</a>
-          <a href="#metodo" class="btn btn--ghost">Ver o método</a>
-        </div>
-
-        <div class="cred">
-          <span class="cred__ring" aria-hidden="true"><img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&amp;fit=crop&amp;w=200&amp;q=80" alt="" width="72" height="72"></span>
-          <p class="cred__text">
-            <strong>Dra. Camila Andrade</strong>
-            CRN-3 45678 · 14 anos de consultório · pós em nutrição clínica funcional
-          </p>
-        </div>
-      </div>
-
-      <div class="hero__media">
-        <div class="arch">
-          <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&amp;fit=crop&amp;w=1100&amp;q=80" alt="Prato equilibrado com vegetais frescos, grãos e proteína, montado para uma consulta nutricional" width="1100" height="1400" fetchpriority="high">
-        </div>
-
-        <div class="seal" aria-hidden="true">
-          <svg viewBox="0 0 140 140" class="seal__svg">
-            <defs><path id="sealPath" d="M70,70 m-52,0 a52,52 0 1,1 104,0 a52,52 0 1,1 -104,0"></path></defs>
-            <text class="seal__text"><textPath href="#sealPath" startOffset="0">nutrição clínica · plano vivo · evidência · rotina real · </textPath></text>
-          </svg>
-          <span class="seal__core"></span>
-        </div>
-
-        <p class="hero__note"><strong>91%</strong><span>de adesão ao plano no 3º mês</span></p>
+        <p class="measure reveal" data-reveal>
+          À frente da clínica, <strong>Helena Duprat</strong> — biomédica esteta, CRBM 3ª Região 18.204 — reúne mais de doze anos dedicados a harmonização facial e bioestimulação de colágeno, com atualização constante em técnicas europeias de rejuvenescimento.
+        </p>
+        <p class="intro__quote reveal" data-reveal>“Estética avançada não é transformar o rosto. É devolver a ele o tempo que a pressa tirou.”</p>
       </div>
     </div>
   </section>
 
-  <!-- ========================= GAUGES ========================= -->
-  <section class="gauges" id="indicadores" aria-labelledby="gauges-h">
+  <!-- ========================= TRATAMENTOS ========================= -->
+  <section class="sect treat" id="tratamentos" aria-labelledby="treat-h">
     <div class="wrap">
-      <div class="sec-head sec-head--center">
-        <p class="eyebrow eyebrow--center"><span class="dot" aria-hidden="true"></span>Indicadores do consultório</p>
-        <h2 id="gauges-h">Números que giram em volta de uma coisa só: <em>continuidade</em>.</h2>
+      <div class="sect__head reveal" data-reveal>
+        <p class="eyebrow"><span class="eyebrow__line" aria-hidden="true"></span>Tratamentos</p>
+        <h2 id="treat-h">Protocolos assinatura, um a um.</h2>
+        <p class="lede measure">Sem menu de procedimentos avulsos. Cada protocolo abaixo é um caminho — combinado, ajustado e revisado ao longo das sessões.</p>
       </div>
 
-      <ul class="gauge-row">
-        <li class="gauge" data-value="91">
-          <div class="gauge__viz">
-            <svg viewBox="0 0 200 118" role="img" aria-label="91 por cento">
-              <path class="gauge__track" d="M16 102 A84 84 0 0 1 184 102"/>
-              <path class="gauge__fill" d="M16 102 A84 84 0 0 1 184 102"/>
-            </svg>
-            <span class="gauge__num"><span class="gauge__n">91</span><i>%</i></span>
+      <ul class="treat__list">
+        <li class="treat__item reveal" data-reveal>
+          <span class="treat__num">01</span>
+          <figure class="oval oval--sm"><img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Aplicação de tratamento facial de harmonização em ambiente clínico" loading="lazy" width="700" height="700"></figure>
+          <div class="treat__body">
+            <h3>Harmonização facial</h3>
+            <p>Preenchimento e toxina lidos a partir das proporções do seu próprio rosto, com correções sutis que evitam o efeito artificial.</p>
           </div>
-          <p class="gauge__label">de adesão ao plano alimentar no terceiro mês de acompanhamento</p>
         </li>
 
-        <li class="gauge gauge--lift" data-value="87">
-          <div class="gauge__viz">
-            <svg viewBox="0 0 200 118" role="img" aria-label="87 por cento">
-              <path class="gauge__track" d="M16 102 A84 84 0 0 1 184 102"/>
-              <path class="gauge__fill" d="M16 102 A84 84 0 0 1 184 102"/>
-            </svg>
-            <span class="gauge__num"><span class="gauge__n">87</span><i>%</i></span>
+        <li class="treat__item treat__item--rev reveal" data-reveal>
+          <span class="treat__num">02</span>
+          <figure class="oval oval--sm"><img src="https://images.unsplash.com/photo-1620733723572-11c53f73a416?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Frasco de sérum e ativos utilizados em bioestimulação de colágeno" loading="lazy" width="700" height="700"></figure>
+          <div class="treat__body">
+            <h3>Bioestimuladores de colágeno</h3>
+            <p>Protocolos que trabalham a pele por dentro, estimulando produção própria de colágeno ao longo de semanas — resultado que continua depois da sessão.</p>
           </div>
-          <p class="gauge__label">mantêm o resultado doze meses depois da alta nutricional</p>
         </li>
 
-        <li class="gauge" data-value="98" data-display="4,9" data-suffix="/5">
-          <div class="gauge__viz">
-            <svg viewBox="0 0 200 118" role="img" aria-label="Nota 4,9 de 5">
-              <path class="gauge__track" d="M16 102 A84 84 0 0 1 184 102"/>
-              <path class="gauge__fill" d="M16 102 A84 84 0 0 1 184 102"/>
-            </svg>
-            <span class="gauge__num"><span class="gauge__n">4,9</span><i>/5</i></span>
+        <li class="treat__item reveal" data-reveal>
+          <span class="treat__num">03</span>
+          <figure class="oval oval--sm"><img src="https://images.unsplash.com/photo-1583417319070-4a69db38a482?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Sessão de protocolo corporal em maca de tratamento estético" loading="lazy" width="700" height="700"></figure>
+          <div class="treat__body">
+            <h3>Protocolos corporais</h3>
+            <p>Firmeza, contorno e textura da pele do corpo, com técnicas combinadas escolhidas conforme a resposta de cada tipo de tecido.</p>
           </div>
-          <p class="gauge__label">nota média das pacientes em 412 avaliações verificadas</p>
+        </li>
+
+        <li class="treat__item treat__item--rev reveal" data-reveal>
+          <span class="treat__num">04</span>
+          <figure class="oval oval--sm"><img src="https://images.unsplash.com/photo-1596178065887-1198b6148b2b?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Ambiente de clínica de estética com iluminação suave para procedimentos a laser" loading="lazy" width="700" height="700"></figure>
+          <div class="treat__body">
+            <h3>Laser &amp; fotorrejuvenescimento</h3>
+            <p>Manchas, vasinhos e textura irregular tratados com equipamento calibrado à sua fototipia — sem queimar etapas.</p>
+          </div>
+        </li>
+
+        <li class="treat__item reveal" data-reveal>
+          <span class="treat__num">05</span>
+          <figure class="oval oval--sm"><img src="https://images.unsplash.com/photo-1573883431205-98b5f10aaedb?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Mãos aplicando peeling em tratamento de renovação da pele" loading="lazy" width="700" height="700"></figure>
+          <div class="treat__body">
+            <h3>Peelings &amp; renovação de pele</h3>
+            <p>Renovação gradual, sem o vermelhão de semanas — a intensidade certa para a pele que você tem hoje, não para a de um protocolo genérico.</p>
+          </div>
         </li>
       </ul>
-
-      <p class="gauges__foot">
-        Mais de <strong>2.400 pessoas</strong> acompanhadas desde 2011, em atendimento presencial em São Paulo e por teleconsulta para todo o Brasil.
-      </p>
     </div>
   </section>
 
-  <!-- ========================= ÓRBITA / PROGRAMAS ========================= -->
-  <section class="orbit-sec" id="programas" aria-labelledby="orbit-h">
+  <!-- ========================= RESULTADOS / COMPARADOR ========================= -->
+  <section class="sect results" id="resultados" aria-labelledby="results-h">
+    <div class="wrap results__comp">
+      <div class="sect__head reveal" data-reveal>
+        <p class="eyebrow"><span class="eyebrow__line" aria-hidden="true"></span>Resultados</p>
+        <h2 id="results-h">A diferença é discreta. <em>É por isso que funciona.</em></h2>
+        <p class="lede measure">Arraste o círculo para comparar — o objetivo nunca foi parecer outra pessoa.</p>
+      </div>
+
+      <div class="ovalcompare reveal" data-reveal>
+        <div class="ovalcompare__frame" id="compareFrame">
+          <div class="ovalcompare__layer">
+            <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&amp;fit=crop&amp;w=1000&amp;q=80" alt="Pele antes do protocolo de bioestimulação, com textura irregular" loading="lazy" width="1000" height="1000">
+          </div>
+          <div class="ovalcompare__layer ovalcompare__layer--after" id="compareAfter">
+            <img src="https://images.unsplash.com/photo-1519824145371-296894a0daa9?auto=format&amp;fit=crop&amp;w=1000&amp;q=80" alt="Pele depois do protocolo, com viço e textura uniforme" loading="lazy" width="1000" height="1000">
+          </div>
+          <div class="ovalcompare__handle" id="compareHandle" role="slider" tabindex="0"
+               aria-label="Arraste para comparar a pele antes e depois do protocolo"
+               aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-valuetext="50% do resultado depois visível">
+            <span class="ovalcompare__knob" aria-hidden="true"></span>
+          </div>
+          <span class="ovalcompare__tag ovalcompare__tag--l" aria-hidden="true">antes</span>
+          <span class="ovalcompare__tag ovalcompare__tag--r" aria-hidden="true">depois</span>
+        </div>
+        <p class="ovalcompare__hint">Arraste a alça — ou use as setas do teclado — para comparar.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================= DEPOIMENTOS ========================= -->
+  <section class="sect quotes" id="depoimentos" aria-labelledby="quotes-h">
     <div class="wrap">
-      <div class="sec-head">
-        <p class="eyebrow"><span class="dot" aria-hidden="true"></span>Programas clínicos</p>
-        <h2 id="orbit-h">Cinco objetivos <em>em órbita</em>. Um plano no centro.</h2>
-        <p class="sec-head__p">Gire a órbita para ver como cada objetivo é trabalhado. O que muda é a prioridade clínica — a espinha dorsal do acompanhamento é sempre a mesma.</p>
-      </div>
+      <p class="eyebrow eyebrow--center reveal" data-reveal><span class="eyebrow__line" aria-hidden="true"></span>Depoimentos</p>
+      <h2 id="quotes-h" class="sr-only">O que dizem sobre a Lumière</h2>
 
-      <div class="orbit">
-        <div class="orbit__stage" id="orbitStage">
-          <svg class="orbit__ring" viewBox="0 0 600 600" aria-hidden="true" focusable="false">
-            <circle cx="300" cy="300" r="262" class="orbit__ring-dash"/>
-            <circle cx="300" cy="300" r="230" class="orbit__ring-thin"/>
-          </svg>
+      <blockquote class="quote reveal" data-reveal data-blur>
+        <p>“Fiz harmonização em três clínicas antes. Foi a primeira vez que ninguém tentou me vender mais do que eu precisava — e o resultado foi o mais natural dos três, de longe.”</p>
+        <footer><cite>Renata C.</cite><span>42 anos · harmonização facial</span></footer>
+      </blockquote>
 
-          <span class="orbit__slot" aria-hidden="true"></span>
+      <blockquote class="quote reveal" data-reveal data-blur>
+        <p>“O acompanhamento entre as sessões de bioestimulador fez toda a diferença. Cada retorno tinha um ajuste fino, nunca o mesmo protocolo repetido sem pensar.”</p>
+        <footer><cite>Paula M.</cite><span>35 anos · bioestimulação de colágeno</span></footer>
+      </blockquote>
 
-          <div class="orbit__chips" id="orbitTabs" role="tablist" aria-label="Programas clínicos">
-            <button class="chip" role="tab" id="chip-0" aria-controls="painel-0" aria-selected="true" tabindex="0" type="button">Emagrecimento sustentável</button>
-            <button class="chip" role="tab" id="chip-1" aria-controls="painel-1" aria-selected="false" tabindex="-1" type="button">Performance esportiva</button>
-            <button class="chip" role="tab" id="chip-2" aria-controls="painel-2" aria-selected="false" tabindex="-1" type="button">Reeducação alimentar</button>
-            <button class="chip" role="tab" id="chip-3" aria-controls="painel-3" aria-selected="false" tabindex="-1" type="button">Saúde hormonal</button>
-            <button class="chip" role="tab" id="chip-4" aria-controls="painel-4" aria-selected="false" tabindex="-1" type="button">Saúde intestinal</button>
-          </div>
-
-          <div class="orbit__core" id="orbitCore">
-            <article class="core-slide is-active" data-slide="0" aria-hidden="true">
-              <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="" width="900" height="900" loading="lazy">
-              <div class="core-slide__cap">
-                <h3>Emagrecimento sustentável</h3>
-                <p>Déficit calibrado, sem cortar o que você gosta de comer.</p>
-              </div>
-            </article>
-            <article class="core-slide" data-slide="1" aria-hidden="true">
-              <img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="" width="900" height="900" loading="lazy">
-              <div class="core-slide__cap">
-                <h3>Performance esportiva</h3>
-                <p>Energia no treino, recuperação entre as sessões.</p>
-              </div>
-            </article>
-            <article class="core-slide" data-slide="2" aria-hidden="true">
-              <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="" width="900" height="900" loading="lazy">
-              <div class="core-slide__cap">
-                <h3>Reeducação alimentar</h3>
-                <p>Sair do ciclo dieta-culpa-recaída, de vez.</p>
-              </div>
-            </article>
-            <article class="core-slide" data-slide="3" aria-hidden="true">
-              <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="" width="900" height="900" loading="lazy">
-              <div class="core-slide__cap">
-                <h3>Saúde hormonal</h3>
-                <p>SOP, tireoide e climatério com suporte nutricional.</p>
-              </div>
-            </article>
-            <article class="core-slide" data-slide="4" aria-hidden="true">
-              <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="" width="900" height="900" loading="lazy">
-              <div class="core-slide__cap">
-                <h3>Saúde intestinal</h3>
-                <p>Protocolo para inchaço, refluxo e intestino irritável.</p>
-              </div>
-            </article>
-          </div>
-        </div>
-
-        <div class="orbit__detail" id="orbitDetail">
-          <div class="panel" role="tabpanel" id="painel-0" aria-labelledby="chip-0" tabindex="0">
-            <p class="panel__num">01 / 05</p>
-            <h3 class="panel__title">Emagrecimento sustentável</h3>
-            <p class="panel__desc">Para quem já emagreceu e recuperou o peso mais de uma vez. Trabalhamos o déficit possível para a sua rotina, com preservação de massa magra e ajuste quinzenal conforme a bioimpedância responde.</p>
-            <ul class="panel__list">
-              <li>Avaliação antropométrica e bioimpedância seriada</li>
-              <li>Plano com substituições reais para restaurante e delivery</li>
-              <li>Estratégia para fim de semana e eventos sociais</li>
-              <li>Protocolo de manutenção depois da meta</li>
-            </ul>
-            <p class="panel__meta"><span>12 a 24 semanas</span><span>Presencial ou online</span></p>
-          </div>
-
-          <div class="panel" role="tabpanel" id="painel-1" aria-labelledby="chip-1" tabindex="0" hidden>
-            <p class="panel__num">02 / 05</p>
-            <h3 class="panel__title">Performance esportiva</h3>
-            <p class="panel__desc">Para corrida, força e esportes de resistência. A alimentação é desenhada em cima da sua planilha de treino: o que comer antes, durante e depois de cada sessão, com periodização de carboidrato.</p>
-            <ul class="panel__list">
-              <li>Periodização de carboidrato por tipo de treino</li>
-              <li>Protocolo de hidratação e eletrólitos</li>
-              <li>Estratégia de prova e dia de competição</li>
-              <li>Suplementação com respaldo em evidência</li>
-            </ul>
-            <p class="panel__meta"><span>16 semanas</span><span>Integração com o treinador</span></p>
-          </div>
-
-          <div class="panel" role="tabpanel" id="painel-2" aria-labelledby="chip-2" tabindex="0" hidden>
-            <p class="panel__num">03 / 05</p>
-            <h3 class="panel__title">Reeducação alimentar</h3>
-            <p class="panel__desc">Para quem quer parar de contar tudo e ainda assim comer bem. O foco sai do número e vai para o comportamento: fome, saciedade, contexto e as escolhas que se repetem toda semana.</p>
-            <ul class="panel__list">
-              <li>Mapeamento de gatilhos e comer emocional</li>
-              <li>Construção de pratos-padrão para a sua semana</li>
-              <li>Lista de compras e organização da cozinha</li>
-              <li>Encaminhamento à psicologia quando indicado</li>
-            </ul>
-            <p class="panel__meta"><span>Acompanhamento contínuo</span><span>Encontros quinzenais</span></p>
-          </div>
-
-          <div class="panel" role="tabpanel" id="painel-3" aria-labelledby="chip-3" tabindex="0" hidden>
-            <p class="panel__num">04 / 05</p>
-            <h3 class="panel__title">Saúde hormonal</h3>
-            <p class="panel__desc">Conduta nutricional para SOP, resistência à insulina, tireoide e climatério, sempre em diálogo com a sua endocrinologista ou ginecologista. Leitura de exames antes de qualquer prescrição.</p>
-            <ul class="panel__list">
-              <li>Leitura de exames laboratoriais e histórico clínico</li>
-              <li>Ajuste de carga glicêmica e distribuição de refeições</li>
-              <li>Suporte a ciclo menstrual, sono e energia</li>
-              <li>Relatório clínico enviado ao médico responsável</li>
-            </ul>
-            <p class="panel__meta"><span>24 semanas</span><span>Conduta interdisciplinar</span></p>
-          </div>
-
-          <div class="panel" role="tabpanel" id="painel-4" aria-labelledby="chip-4" tabindex="0" hidden>
-            <p class="panel__num">05 / 05</p>
-            <h3 class="panel__title">Saúde intestinal</h3>
-            <p class="panel__desc">Para inchaço persistente, refluxo, constipação e síndrome do intestino irritável. Protocolo de investigação alimentar conduzido com critério, com reintrodução planejada — nunca uma lista infinita de proibições.</p>
-            <ul class="panel__list">
-              <li>Diário alimentar e de sintomas com leitura clínica</li>
-              <li>Protocolo de baixo FODMAP com reintrodução guiada</li>
-              <li>Estratégia de fibras, fermentados e hidratação</li>
-              <li>Reavaliação de sintomas a cada duas semanas</li>
-            </ul>
-            <p class="panel__meta"><span>8 a 12 semanas</span><span>Reavaliação quinzenal</span></p>
-          </div>
-        </div>
-      </div>
+      <blockquote class="quote reveal" data-reveal data-blur>
+        <p>“Cheguei achando que precisava de um procedimento grande. A Helena me mostrou, com exames de pele, que eu precisava de menos — e de mais tempo entre as sessões.”</p>
+        <footer><cite>Isabela F.</cite><span>29 anos · peeling &amp; renovação</span></footer>
+      </blockquote>
     </div>
   </section>
 
-  <!-- ========================= O PRATO QUE SE MONTA ========================= -->
-  <section class="assemble" id="metodo" aria-labelledby="assemble-h">
-    <div class="assemble__intro wrap">
-      <p class="eyebrow eyebrow--center"><span class="dot" aria-hidden="true"></span>O método Bellevie</p>
-      <h2 id="assemble-h">Role a página e veja o <em>prato se montar</em>.</h2>
-      <p class="sec-head__p sec-head__p--center">Cada peça que se assenta é uma etapa do acompanhamento. Nenhuma delas funciona sozinha — o resultado é a composição.</p>
-    </div>
+  <!-- ========================= LOCALIZAÇÃO ========================= -->
+  <section class="sect place" id="localizacao" aria-labelledby="place-h">
+    <div class="wrap place__comp">
+      <div class="place__copy">
+        <p class="eyebrow reveal" data-reveal><span class="eyebrow__line" aria-hidden="true"></span>Onde estamos</p>
+        <h2 id="place-h" class="reveal" data-reveal>Um endereço, <em>sem placa</em> na porta.</h2>
+        <p class="lede measure reveal" data-reveal>Atendimento só com hora marcada, em ambiente reservado nos Jardins. A privacidade faz parte do protocolo, não é um detalhe.</p>
 
-    <div class="assemble__track" id="assembleTrack">
-      <div class="assemble__stage" id="assembleStage">
-        <div class="plate" id="plate">
-          <svg class="plate__ring" viewBox="0 0 400 400" aria-hidden="true" focusable="false">
-            <circle cx="200" cy="200" r="196" class="plate__ring-line" id="plateRing"/>
-          </svg>
-          <div class="plate__disc">
-            <img src="https://images.unsplash.com/photo-1482049016688-2d3e1b311543?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Refeição completa e colorida montada como referência do método Bellevie" width="900" height="900" loading="lazy">
-          </div>
-          <p class="plate__caption" id="plateCaption"><em>Nutre</em> Bellevie</p>
-        </div>
-
-        <ul class="pieces" id="pieces">
-          <li class="piece" data-step="1">
-            <span class="piece__img"><img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&amp;fit=crop&amp;w=400&amp;q=70" alt="" width="400" height="400" loading="lazy"></span>
-            <span class="piece__tag"><b>01</b> Avaliação clínica</span>
-          </li>
-          <li class="piece" data-step="2">
-            <span class="piece__img"><img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&amp;fit=crop&amp;w=400&amp;q=70" alt="" width="400" height="400" loading="lazy"></span>
-            <span class="piece__tag"><b>02</b> Exames e bioimpedância</span>
-          </li>
-          <li class="piece" data-step="3">
-            <span class="piece__img"><img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&amp;fit=crop&amp;w=400&amp;q=70" alt="" width="400" height="400" loading="lazy"></span>
-            <span class="piece__tag"><b>03</b> Plano flexível</span>
-          </li>
-          <li class="piece" data-step="4">
-            <span class="piece__img"><img src="https://images.unsplash.com/photo-1519162808019-7de1683fa2ad?auto=format&amp;fit=crop&amp;w=400&amp;q=70" alt="" width="400" height="400" loading="lazy"></span>
-            <span class="piece__tag"><b>04</b> Cozinha organizada</span>
-          </li>
-          <li class="piece" data-step="5">
-            <span class="piece__img"><img src="https://images.unsplash.com/photo-1522543558187-768b6df7c25c?auto=format&amp;fit=crop&amp;w=400&amp;q=70" alt="" width="400" height="400" loading="lazy"></span>
-            <span class="piece__tag"><b>05</b> Ajuste quinzenal</span>
-          </li>
-          <li class="piece" data-step="6">
-            <span class="piece__img"><img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&amp;fit=crop&amp;w=400&amp;q=70" alt="" width="400" height="400" loading="lazy"></span>
-            <span class="piece__tag"><b>06</b> Alta assistida</span>
-          </li>
-        </ul>
+        <dl class="place__facts reveal" data-reveal>
+          <div><dt>Endereço</dt><dd>Rua Oscar Freire, 1200 — conjunto 61<br>Jardins, São Paulo/SP</dd></div>
+          <div><dt>Atendimento</dt><dd>Terça a sábado, 9h às 19h<br>Somente com agendamento prévio</dd></div>
+          <div><dt>Acesso</dt><dd>Manobrista no local<br>Metrô Consolação — 12 min a pé</dd></div>
+        </dl>
       </div>
-    </div>
 
-    <div class="wrap assemble__foot">
-      <ol class="steps-text">
-        <li><b>Avaliação clínica</b> — 80 minutos de anamnese, história de peso, rotina, sono e relação com a comida.</li>
-        <li><b>Exames e bioimpedância</b> — leitura laboratorial e composição corporal como linha de base.</li>
-        <li><b>Plano flexível</b> — entregue em até 5 dias, com substituições para os dias que saem do script.</li>
-        <li><b>Cozinha organizada</b> — lista de compras, preparo semanal e o que manter sempre à mão.</li>
-        <li><b>Ajuste quinzenal</b> — consulta de retorno e canal direto no WhatsApp entre as sessões.</li>
-        <li><b>Alta assistida</b> — protocolo de manutenção e dois retornos de segurança após a alta.</li>
-      </ol>
+      <figure class="oval oval--place reveal" data-reveal>
+        <img src="https://images.unsplash.com/photo-1554188248-986adbb73be4?auto=format&amp;fit=crop&amp;w=1000&amp;q=80" alt="Fachada discreta de edifício nos Jardins, São Paulo, onde fica a clínica" loading="lazy" width="1000" height="1250">
+      </figure>
     </div>
   </section>
 
-  <!-- ========================= ANTES / DEPOIS + HISTÓRIAS ========================= -->
-  <section class="stories" id="historias" aria-labelledby="stories-h">
-    <div class="wrap stories__grid">
-      <div class="stories__viz">
-        <div class="compare" id="compare">
-          <div class="compare__layer compare__layer--before">
-            <img src="https://images.unsplash.com/photo-1455853828816-0c301a011711?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Refeição improvisada e desequilibrada, representando a rotina alimentar antes do acompanhamento" width="900" height="900" loading="lazy">
-            <span class="compare__tag compare__tag--l">Antes · rotina no automático</span>
-          </div>
-          <div class="compare__layer compare__layer--after" id="compareAfter">
-            <img src="https://images.unsplash.com/photo-1466637574441-749b8f19452f?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Refeição equilibrada e colorida, representando o prato depois do acompanhamento nutricional" width="900" height="900" loading="lazy">
-            <span class="compare__tag compare__tag--r">Depois · plano Bellevie</span>
-          </div>
-
-          <div class="compare__handle" id="compareHandle" role="slider" tabindex="0"
-               aria-label="Arraste para comparar o prato antes e depois do acompanhamento"
-               aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-valuetext="50% do prato depois visível">
-            <span class="compare__line" aria-hidden="true"></span>
-            <span class="compare__knob" aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 6-6 6 6 6"/><path d="M9 6h.01"/></svg>
-              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg>
-            </span>
-          </div>
-        </div>
-        <p class="compare__hint">Arraste a alça — ou use as setas do teclado — para comparar.</p>
-      </div>
-
-      <div class="stories__copy">
-        <p class="eyebrow"><span class="dot" aria-hidden="true"></span>Histórias reais</p>
-        <h2 id="stories-h">O que muda não é só o <em>prato</em>.</h2>
-
-        <div class="quotes" id="quotes">
-          <blockquote class="quote is-active" data-q="0">
-            <p>“Eu tinha feito seis dietas em quatro anos. Foi a primeira vez que alguém montou o plano olhando para a minha agenda, e não para um cardápio pronto. Nove meses depois, o peso continua onde paramos.”</p>
-            <footer><b>Marina R.</b><span>38 anos · emagrecimento sustentável</span></footer>
-          </blockquote>
-          <blockquote class="quote" data-q="1">
-            <p>“Cortei 11 minutos no meu tempo de meia maratona sem mudar o treino — mudou o que eu como antes e depois. A periodização de carboidrato foi o divisor de águas.”</p>
-            <footer><b>Thiago M.</b><span>31 anos · performance esportiva</span></footer>
-          </blockquote>
-          <blockquote class="quote" data-q="2">
-            <p>“Vivia inchada e achava que era normal. Em oito semanas de protocolo os sintomas praticamente sumiram, e o melhor: hoje eu como de novo quase tudo que tinha cortado por conta própria.”</p>
-            <footer><b>Letícia A.</b><span>44 anos · saúde intestinal</span></footer>
-          </blockquote>
-        </div>
-
-        <div class="quotes__nav" role="group" aria-label="Escolher depoimento">
-          <button type="button" class="avatar is-active" data-go="0" aria-label="Depoimento de Marina R."><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&amp;fit=crop&amp;w=160&amp;q=70" alt="" width="160" height="160" loading="lazy"></button>
-          <button type="button" class="avatar" data-go="1" aria-label="Depoimento de Thiago M."><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&amp;fit=crop&amp;w=160&amp;q=70" alt="" width="160" height="160" loading="lazy"></button>
-          <button type="button" class="avatar" data-go="2" aria-label="Depoimento de Letícia A."><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&amp;fit=crop&amp;w=160&amp;q=70" alt="" width="160" height="160" loading="lazy"></button>
-        </div>
-      </div>
+  <!-- ========================= CONTATO FINAL ========================= -->
+  <section class="sect closing" id="contato" aria-labelledby="closing-h">
+    <div class="closing__media" aria-hidden="true">
+      <img src="https://images.unsplash.com/photo-1600180758890-6b94519a8ba6?auto=format&amp;fit=crop&amp;w=2000&amp;q=80" alt="" loading="lazy">
+      <div class="closing__veil"></div>
     </div>
-  </section>
 
-  <!-- ========================= CTA + FORMULÁRIO ========================= -->
-  <section class="book" id="agendar" aria-labelledby="book-h">
-    <div class="wrap book__grid">
-      <div class="book__aside">
-        <div class="arch arch--sm">
-          <img src="https://images.unsplash.com/photo-1543362906-acfc16c67564?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Consultório de nutrição preparado para uma avaliação individual" width="800" height="1000" loading="lazy">
-        </div>
-        <ul class="book__facts">
-          <li><b>Avaliação inicial</b> 80 minutos, presencial na Vila Madalena ou por teleconsulta</li>
-          <li><b>Retorno</b> em até 5 dias úteis com o plano completo em mãos</li>
-          <li><b>Resposta</b> ao formulário em até 1 dia útil, pelo WhatsApp</li>
-        </ul>
-      </div>
+    <div class="wrap closing__content">
+      <p class="eyebrow eyebrow--onmedia eyebrow--center reveal" data-reveal><span class="eyebrow__line" aria-hidden="true"></span>Contato</p>
+      <h2 id="closing-h" class="reveal" data-reveal>Fale com a Lumière <em>antes de decidir</em>.</h2>
+      <p class="lede measure center reveal" data-reveal>Sem formulário, sem questionário longo. Uma conversa direta pelo WhatsApp já começa a leitura do seu caso.</p>
 
-      <div class="book__form-wrap">
-        <p class="eyebrow"><span class="dot" aria-hidden="true"></span>Agendamento</p>
-        <h2 id="book-h">Vamos montar o <em>seu</em> prato.</h2>
-        <p class="sec-head__p">Preencha os campos abaixo. A própria Dra. Camila lê cada pedido antes de a secretária entrar em contato com os horários disponíveis.</p>
-
-        <form class="form" id="form" novalidate>
-          <div class="field">
-            <label for="f-nome">Nome completo</label>
-            <input type="text" id="f-nome" name="nome" autocomplete="name" required placeholder="Como podemos te chamar">
-          </div>
-          <div class="field-row">
-            <div class="field">
-              <label for="f-email">E-mail</label>
-              <input type="email" id="f-email" name="email" autocomplete="email" required placeholder="voce@email.com.br">
-            </div>
-            <div class="field">
-              <label for="f-tel">WhatsApp</label>
-              <input type="tel" id="f-tel" name="telefone" autocomplete="tel" required placeholder="(11) 90000-0000">
-            </div>
-          </div>
-          <div class="field">
-            <label for="f-obj">Objetivo principal</label>
-            <select id="f-obj" name="objetivo" required>
-              <option value="">Selecione o programa de interesse</option>
-              <option>Emagrecimento sustentável</option>
-              <option>Performance esportiva</option>
-              <option>Reeducação alimentar</option>
-              <option>Saúde hormonal (SOP, tireoide, climatério)</option>
-              <option>Saúde intestinal</option>
-              <option>Ainda não sei — preciso de orientação</option>
-            </select>
-          </div>
-          <div class="field">
-            <label for="f-msg">Conte um pouco do seu momento <span>(opcional)</span></label>
-            <textarea id="f-msg" name="mensagem" rows="3" placeholder="Histórico, exames recentes, rotina de treino, restrições…"></textarea>
-          </div>
-          <button type="submit" class="btn btn--solid btn--block">Solicitar avaliação</button>
-          <p class="form__status" id="formStatus" role="status" aria-live="polite"></p>
-          <p class="form__legal">Ao enviar, você concorda em ser contatada pela equipe da Nutre Bellevie. Seus dados não são compartilhados com terceiros.</p>
-        </form>
-      </div>
+      <ul class="closing__facts reveal" data-reveal>
+        <li><span>Telefone</span><a href="tel:+551130682200">(11) 3068-2200</a></li>
+        <li><span>E-mail</span><a href="mailto:ola@lumiereestetica.com.br">ola@lumiereestetica.com.br</a></li>
+        <li><span>Endereço</span>Rua Oscar Freire, 1200 — Jardins, São Paulo/SP</li>
+        <li><span>Horário</span>Terça a sábado, 9h às 19h</li>
+      </ul>
     </div>
   </section>
 
@@ -453,48 +242,25 @@
 
 <!-- ========================= FOOTER ========================= -->
 <footer class="ft">
-  <div class="wrap ft__grid">
-    <div class="ft__brand">
-      <a href="#topo" class="brand brand--ft">
-        <span class="brand__mark" aria-hidden="true">
-          <svg viewBox="0 0 44 44" width="40" height="40"><circle cx="22" cy="22" r="21" fill="none" stroke="currentColor" stroke-width="1.4" opacity=".4"/><circle cx="22" cy="22" r="12.5" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="22" cy="9.5" r="3.4" fill="var(--coral)"/></svg>
-        </span>
-        <span class="brand__text">Nutre <em>Bellevie</em><small>nutrição clínica</small></span>
-      </a>
-      <p>Consultório de nutrição clínica em São Paulo, com atendimento por teleconsulta para todo o Brasil.</p>
-    </div>
-
-    <div class="ft__col">
-      <h2>Navegar</h2>
-      <ul>
-        <li><a href="#inicio">Início</a></li>
-        <li><a href="#programas">Programas</a></li>
-        <li><a href="#metodo">O método</a></li>
-        <li><a href="#historias">Histórias</a></li>
-        <li><a href="#agendar">Agendar</a></li>
-      </ul>
-    </div>
-
-    <div class="ft__col">
-      <h2>Contato</h2>
-      <ul>
-        <li><a href="tel:+551139000000">(11) 3900-0000</a></li>
-        <li><a href="mailto:contato@nutrebellevie.com.br">contato@nutrebellevie.com.br</a></li>
-        <li>Rua Harmonia, 480 — Vila Madalena, São Paulo/SP</li>
-        <li>Seg a sex, 8h às 19h</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="wrap ft__bar">
-    <p>© 2026 Nutre Bellevie. Dra. Camila Andrade — CRN-3 45678.</p>
-    <p>Conteúdo informativo; não substitui consulta, diagnóstico ou tratamento.</p>
+  <div class="wrap ft__inner">
+    <a href="#topo" class="brand brand--ft">
+      <span class="brand__mark" aria-hidden="true">
+        <svg viewBox="0 0 60 40" width="38" height="25"><ellipse cx="30" cy="22" rx="21" ry="13" fill="none" stroke="currentColor" stroke-width="1.3"/><line x1="30" y1="9" x2="30" y2="1" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+      </span>
+      <span class="brand__text">Lumière<em>Estética</em></span>
+    </a>
+    <p class="ft__legal">© 2026 Lumière Estética. Helena Duprat — Biomédica Esteta, CRBM 3ª Região 18.204.</p>
+    <p class="ft__legal ft__legal--muted">Conteúdo informativo; procedimentos estéticos exigem avaliação individual prévia.</p>
   </div>
 </footer>
 
+<!-- ========================= WHATSAPP FLUTUANTE ========================= -->
+<a href="https://wa.me/5511912345678?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o" class="wa-float" id="waFloat" target="_blank" rel="noopener" aria-label="Agendar avaliação pelo WhatsApp">
+  <svg viewBox="0 0 32 32" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M16.01 3C9.38 3 4 8.38 4 15.01c0 2.37.68 4.58 1.86 6.45L4 29l7.73-1.8a12.9 12.9 0 0 0 4.28.73c6.63 0 12.01-5.38 12.01-12.01C28.02 8.38 22.64 3 16.01 3zm0 21.86c-1.47 0-2.9-.4-4.14-1.15l-.3-.18-4.34 1.01 1.05-4.24-.2-.31a9.77 9.77 0 0 1-1.5-5.2c0-5.43 4.42-9.85 9.85-9.85 5.43 0 9.85 4.42 9.85 9.85 0 5.43-4.42 10.07-10.27 10.07zm5.38-7.36c-.29-.15-1.74-.86-2.01-.96-.27-.1-.47-.15-.66.15-.2.29-.76.96-.94 1.16-.17.2-.35.22-.64.07-.29-.15-1.24-.46-2.36-1.46-.87-.78-1.46-1.74-1.63-2.03-.17-.29-.02-.45.13-.6.13-.13.29-.35.44-.52.15-.17.2-.29.29-.49.1-.2.05-.37-.02-.52-.07-.15-.66-1.6-.91-2.19-.24-.58-.48-.5-.66-.51-.17-.01-.37-.01-.56-.01-.2 0-.52.07-.79.37-.27.29-1.04 1.02-1.04 2.48 0 1.46 1.07 2.87 1.22 3.07.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.08 1.74-.71 1.99-1.4.24-.68.24-1.27.17-1.4-.07-.12-.26-.2-.55-.35z"/></svg>
+</a>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/Draggable.min.js"></script>
 <script src="js/script.js"></script>
 </body>
 </html>

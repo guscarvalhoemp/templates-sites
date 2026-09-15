@@ -25,461 +25,259 @@
     <nav class="main-nav" aria-label="Navegação principal">
       <ul class="main-nav__list">
         <li><a href="#obras">Obras</a></li>
-        <li><a href="#fases">Fases</a></li>
         <li><a href="#estudio">Estúdio</a></li>
-        <li><a href="#contato">Contato</a></li>
+        <li><a href="#contato" class="main-nav__cta">Contato</a></li>
       </ul>
     </nav>
 
-    <div class="site-header__actions">
-      <a href="#contato" class="btn btn--outline header-cta">Iniciar um Projeto</a>
-      <button class="nav-burger" id="navBurger" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileMenu">
-        <span></span><span></span>
-      </button>
-    </div>
+    <button class="nav-burger" id="navBurger" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span>
+    </button>
   </div>
 </header>
 
 <div class="mobile-menu" id="mobileMenu" data-state="closed">
   <ul class="mobile-menu__list">
     <li><a href="#obras">Obras</a></li>
-    <li><a href="#fases">Fases</a></li>
     <li><a href="#estudio">Estúdio</a></li>
-    <li><a href="#contato">Contato</a></li>
+    <li><a href="#contato" class="mobile-menu__cta">Contato</a></li>
   </ul>
-  <a href="#contato" class="btn btn--bronze mobile-menu__cta">Iniciar um Projeto</a>
   <p class="mobile-menu__meta">São Paulo — SP · desde 2007</p>
 </div>
 
 <main id="conteudo-principal">
 
-  <!-- 1. HERO -->
+  <!-- 1. HERO — minimalista, tipografia como protagonista -->
   <section class="hero" id="topo">
-    <div class="hero__frame" id="heroFrame">
-      <div class="hero__media" data-parallax-host>
-        <img id="heroImg" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=78" alt="Residência contemporânea de dois pavimentos em madeira, vidro e volumes escuros, iluminada ao entardecer" fetchpriority="high" decoding="async">
-      </div>
-      <div class="hero__scrim"></div>
-    </div>
-
     <div class="hero__inner">
-      <p class="eyebrow eyebrow--light">Arquitetura &amp; Execução — desde 2007</p>
-      <h1 class="hero__title">
-        <span class="lmask"><span class="lmask__i">Da planta ao</span></span>
-        <span class="lmask"><span class="lmask__i">acabamento,</span></span>
-        <span class="lmask"><span class="lmask__i">uma só assinatura.</span></span>
-      </h1>
-      <div class="hero__foot">
-        <p class="hero__lead">Projeto e obra sob o mesmo teto. Conduzimos residências e espaços comerciais de alto padrão com precisão técnica, orçamento fechado e critério estético do primeiro traço à última demão.</p>
-        <div class="hero__actions">
-          <a href="#obras" class="btn btn--bronze">Ver obras</a>
-          <a href="#contato" class="btn btn--outline-light">Iniciar um projeto</a>
-        </div>
-      </div>
+      <p class="hero__kicker" data-hero-reveal>Estúdio de arquitetura &amp; construção civil</p>
+      <h1 class="hero__title" data-hero-reveal>Cerne<br>Construções</h1>
+      <p class="hero__lead" data-hero-reveal>Conduzimos cada obra com o mesmo rigor do projeto à entrega — arquitetura, engenharia e execução sob um único olhar.</p>
     </div>
-
-    <div class="hero__rule">
-      <span class="mono">São Paulo — BR</span>
-      <span class="mono hero__rule-mid">Lat 23°33′S · Long 46°38′O</span>
-      <span class="mono">Rolar</span>
-    </div>
+    <p class="hero__meta" data-hero-reveal>São Paulo, SP — desde 2007</p>
   </section>
 
-  <!-- 2. MARQUEE -->
-  <section class="marquee" id="faixa" aria-hidden="true">
-    <div class="marquee__track" id="marqueeTrack">
-      <div class="marquee__group">
-        <span class="marquee__item">Residencial</span><span class="marquee__divider">—</span>
-        <span class="marquee__item">Comercial</span><span class="marquee__divider">—</span>
-        <span class="marquee__item">Reforma</span><span class="marquee__divider">—</span>
-        <span class="marquee__item">Alto Padrão</span><span class="marquee__divider">—</span>
-        <span class="marquee__item">Arquitetura</span><span class="marquee__divider">—</span>
-        <span class="marquee__item">Interiores</span><span class="marquee__divider">—</span>
-      </div>
-      <div class="marquee__group">
-        <span class="marquee__item">Residencial</span><span class="marquee__divider">—</span>
-        <span class="marquee__item">Comercial</span><span class="marquee__divider">—</span>
-        <span class="marquee__item">Reforma</span><span class="marquee__divider">—</span>
-        <span class="marquee__item">Alto Padrão</span><span class="marquee__divider">—</span>
-        <span class="marquee__item">Arquitetura</span><span class="marquee__divider">—</span>
-        <span class="marquee__item">Interiores</span><span class="marquee__divider">—</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- 3. OBRAS — lista editorial + preview no cursor + expansão Flip -->
-  <section class="works" id="obras">
-    <div class="works__head container">
+  <!-- 2. OBRAS — galeria em grid masonry (o "produto" do site) -->
+  <section class="gallery" id="obras">
+    <div class="container gallery__head">
       <div>
         <p class="eyebrow" data-reveal>Portfólio</p>
         <h2 class="section-title" data-reveal>Obras selecionadas</h2>
       </div>
-      <p class="works__note mono" data-reveal>06 registros — 2022/2025<br>Passe o cursor para visualizar · toque para abrir</p>
+      <p class="gallery__note" data-reveal>Projetos residenciais e comerciais conduzidos pelo estúdio, do traço inicial ao último acabamento. Clique em uma imagem para ampliar.</p>
     </div>
 
-    <ul class="works__list" id="worksList">
+    <div class="masonry-grid container" id="masonryGrid">
 
-      <li class="work"
-          data-title="Casa Aurora"
-          data-cat="Residencial"
-          data-year="2024"
-          data-area="620 m²"
-          data-prazo="19 meses"
-          data-local="Alto de Pinheiros, São Paulo"
-          data-escopo="Projeto executivo, gerenciamento e obra completa"
-          data-desc="Volume escuro em painéis de fibrocimento recortado por um miolo de madeira quente. A entrada foi rebaixada meio nível para criar um pátio de chegada protegido, e toda a caixilharia foi produzida sob medida em alumínio de corte térmico."
-          data-gallery="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=900&q=70|https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=70|https://images.unsplash.com/photo-1503174971373-b1f69850bded?auto=format&fit=crop&w=900&q=70"
-          data-gallery-alt="Fachada escura com entrada iluminada em madeira|Volume da casa entre árvores ao entardecer|Sala de estar ampla e envidraçada">
-        <button class="work__row" type="button" data-index="0" aria-haspopup="dialog">
-          <span class="work__idx mono">01</span>
-          <span class="work__body">
-            <span class="work__title">Casa Aurora</span>
-            <span class="work__meta mono"><span class="work__cat">Residencial</span><span class="work__sep">/</span><span class="work__year">2024</span></span>
+      <figure class="masonry__item masonry__item--hero">
+        <button class="masonry__trigger" type="button" data-title="Residência Aurora" data-meta="Residencial · 2024">
+          <span class="masonry__media">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=76" alt="Residência contemporânea de dois pavimentos em madeira e vidro, iluminada ao entardecer" loading="eager" fetchpriority="high" decoding="async">
           </span>
-          <span class="work__thumb"><img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=220&q=60" alt="" loading="lazy" decoding="async"></span>
-        </button>
-      </li>
-
-      <li class="work"
-          data-title="Cobertura Jardins"
-          data-cat="Reforma"
-          data-year="2023"
-          data-area="410 m²"
-          data-prazo="11 meses"
-          data-local="Jardim Paulista, São Paulo"
-          data-escopo="Reforma estrutural, instalações e interiores"
-          data-desc="Duas unidades unificadas em uma cobertura única. Demolimos o núcleo central para liberar um vão de doze metros, refizemos toda a prumada hidráulica do pavimento e revestimos o piso social em carvalho europeu espinha de peixe."
-          data-gallery="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=70|https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?auto=format&fit=crop&w=900&q=70|https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=70"
-          data-gallery-alt="Living com painel de madeira e lareira embutida|Cozinha em azulejo branco e bancada de madeira|Estar integrado com escada suspensa">
-        <button class="work__row" type="button" data-index="1" aria-haspopup="dialog">
-          <span class="work__idx mono">02</span>
-          <span class="work__body">
-            <span class="work__title">Cobertura Jardins</span>
-            <span class="work__meta mono"><span class="work__cat">Reforma</span><span class="work__sep">/</span><span class="work__year">2023</span></span>
+          <span class="masonry__caption">
+            <span class="masonry__title">Residência Aurora</span>
+            <span class="masonry__cat">Residencial · 2024</span>
           </span>
-          <span class="work__thumb"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=220&q=60" alt="" loading="lazy" decoding="async"></span>
         </button>
-      </li>
+      </figure>
 
-      <li class="work"
-          data-title="Studio Vila Madalena"
-          data-cat="Comercial"
-          data-year="2024"
-          data-area="285 m²"
-          data-prazo="7 meses"
-          data-local="Vila Madalena, São Paulo"
-          data-escopo="Retrofit de galpão, projeto de interiores e obra"
-          data-desc="Um galpão dos anos 60 convertido em escritório-showroom. A estrutura metálica original foi mantida aparente e tratada; a nova pele interna de painéis acústicos permitiu abrir três lanternins que trouxeram luz zenital para o centro da planta."
-          data-gallery="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=70|https://images.unsplash.com/photo-1517581177682-a085bb7ffb15?auto=format&fit=crop&w=900&q=70|https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=70"
-          data-gallery-alt="Ambiente de trabalho com luz natural e mobiliário de couro|Interior em obra com alvenaria aparente e escoras|Área de convivência com painel de madeira">
-        <button class="work__row" type="button" data-index="2" aria-haspopup="dialog">
-          <span class="work__idx mono">03</span>
-          <span class="work__body">
-            <span class="work__title">Studio Vila Madalena</span>
-            <span class="work__meta mono"><span class="work__cat">Comercial</span><span class="work__sep">/</span><span class="work__year">2024</span></span>
+      <figure class="masonry__item masonry__item--tall">
+        <button class="masonry__trigger" type="button" data-title="Studio Vila Madalena" data-meta="Comercial · 2024">
+          <span class="masonry__media">
+            <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=74" alt="Escritório-showroom com luz natural abundante e mobiliário de couro" loading="lazy" decoding="async">
           </span>
-          <span class="work__thumb"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=220&q=60" alt="" loading="lazy" decoding="async"></span>
-        </button>
-      </li>
-
-      <li class="work"
-          data-title="Casa Pátio"
-          data-cat="Residencial"
-          data-year="2022"
-          data-area="480 m²"
-          data-prazo="16 meses"
-          data-local="Granja Viana, Cotia"
-          data-escopo="Projeto, aprovação legal e obra completa"
-          data-desc="Casa térrea organizada em torno de um pátio central de doze por oito metros. Toda a circulação social acontece pela borda envidraçada desse vazio, o que dispensou corredores e reduziu em 18% a área construída prevista no estudo inicial."
-          data-gallery="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=70|https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=900&q=70|https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?auto=format&fit=crop&w=900&q=70"
-          data-gallery-alt="Estar com escada suspensa e vista para o pátio|Volume branco térreo com piscina e vegetação|Detalhe de cozinha em azulejo branco">
-        <button class="work__row" type="button" data-index="3" aria-haspopup="dialog">
-          <span class="work__idx mono">04</span>
-          <span class="work__body">
-            <span class="work__title">Casa Pátio</span>
-            <span class="work__meta mono"><span class="work__cat">Residencial</span><span class="work__sep">/</span><span class="work__year">2022</span></span>
+          <span class="masonry__caption">
+            <span class="masonry__title">Studio Vila Madalena</span>
+            <span class="masonry__cat">Comercial · 2024</span>
           </span>
-          <span class="work__thumb"><img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=220&q=60" alt="" loading="lazy" decoding="async"></span>
         </button>
-      </li>
+      </figure>
 
-      <li class="work"
-          data-title="Residência Brooklin"
-          data-cat="Residencial"
-          data-year="2025"
-          data-area="540 m²"
-          data-prazo="18 meses"
-          data-local="Brooklin Novo, São Paulo"
-          data-escopo="Projeto executivo, obra e paisagismo"
-          data-desc="Implantação em terreno de esquina com desnível de 3,4 metros, resolvido por um platô de concreto que abriga a garagem e sustenta o espelho d'água. Fachada em pele dupla ventilada, que derrubou em um terço a carga térmica do pavimento superior."
-          data-gallery="https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=900&q=70|https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=900&q=70|https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=70"
-          data-gallery-alt="Casa branca de dois pavimentos com piscina|Área externa com piscina e vegetação tropical|Volume da residência entre árvores ao anoitecer">
-        <button class="work__row" type="button" data-index="4" aria-haspopup="dialog">
-          <span class="work__idx mono">05</span>
-          <span class="work__body">
-            <span class="work__title">Residência Brooklin</span>
-            <span class="work__meta mono"><span class="work__cat">Residencial</span><span class="work__sep">/</span><span class="work__year">2025</span></span>
+      <figure class="masonry__item masonry__item--std">
+        <button class="masonry__trigger" type="button" data-title="Cobertura Jardins" data-meta="Reforma · 2023">
+          <span class="masonry__media">
+            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=74" alt="Living amplo com painel de madeira, lareira embutida e piso em carvalho" loading="lazy" decoding="async">
           </span>
-          <span class="work__thumb"><img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=220&q=60" alt="" loading="lazy" decoding="async"></span>
-        </button>
-      </li>
-
-      <li class="work"
-          data-title="Loft Itaim"
-          data-cat="Reforma"
-          data-year="2023"
-          data-area="230 m²"
-          data-prazo="9 meses"
-          data-local="Itaim Bibi, São Paulo"
-          data-escopo="Reforma completa, marcenaria e automação"
-          data-desc="Pé-direito duplo recuperado com a remoção de um mezanino mal resolvido. Fachada refeita em ripado de cumaru sobre isolamento térmico, e toda a marcenaria produzida na nossa própria oficina, com prumo verificado peça a peça."
-          data-gallery="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=900&q=70|https://images.unsplash.com/photo-1517581177682-a085bb7ffb15?auto=format&fit=crop&w=900&q=70|https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=70"
-          data-gallery-alt="Fachada em madeira e concreto com jardim frontal|Interior em obra com alvenaria aparente|Ambiente finalizado com luz natural abundante">
-        <button class="work__row" type="button" data-index="5" aria-haspopup="dialog">
-          <span class="work__idx mono">06</span>
-          <span class="work__body">
-            <span class="work__title">Loft Itaim</span>
-            <span class="work__meta mono"><span class="work__cat">Reforma</span><span class="work__sep">/</span><span class="work__year">2023</span></span>
+          <span class="masonry__caption">
+            <span class="masonry__title">Cobertura Jardins</span>
+            <span class="masonry__cat">Reforma · 2023</span>
           </span>
-          <span class="work__thumb"><img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=220&q=60" alt="" loading="lazy" decoding="async"></span>
         </button>
-      </li>
+      </figure>
 
-    </ul>
-  </section>
+      <figure class="masonry__item masonry__item--std">
+        <button class="masonry__trigger" type="button" data-title="Casa Pátio" data-meta="Residencial · 2022">
+          <span class="masonry__media">
+            <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=74" alt="Volume branco térreo organizado em torno de um pátio com piscina" loading="lazy" decoding="async">
+          </span>
+          <span class="masonry__caption">
+            <span class="masonry__title">Casa Pátio</span>
+            <span class="masonry__cat">Residencial · 2022</span>
+          </span>
+        </button>
+      </figure>
 
-  <!-- 4. FASES DA OBRA — scrubber -->
-  <section class="phases" id="fases">
-    <div class="phases__inner" id="phasesInner">
+      <figure class="masonry__item masonry__item--wide">
+        <button class="masonry__trigger" type="button" data-title="Loft Itaim" data-meta="Reforma · 2023">
+          <span class="masonry__media">
+            <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=1400&q=74" alt="Fachada em ripado de madeira e concreto com jardim frontal" loading="lazy" decoding="async">
+          </span>
+          <span class="masonry__caption">
+            <span class="masonry__title">Loft Itaim</span>
+            <span class="masonry__cat">Reforma · 2023</span>
+          </span>
+        </button>
+      </figure>
 
-      <div class="phases__head">
-        <p class="eyebrow">Da fundação à chave</p>
-        <h2 class="phases__title">Cinco fases, um único responsável</h2>
-      </div>
+      <figure class="masonry__item masonry__item--std">
+        <button class="masonry__trigger" type="button" data-title="Residência Brooklin" data-meta="Residencial · 2025">
+          <span class="masonry__media">
+            <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=900&q=74" alt="Casa branca de dois pavimentos com piscina e vegetação tropical" loading="lazy" decoding="async">
+          </span>
+          <span class="masonry__caption">
+            <span class="masonry__title">Residência Brooklin</span>
+            <span class="masonry__cat">Residencial · 2025</span>
+          </span>
+        </button>
+      </figure>
 
-      <div class="phases__body">
-        <div class="phases__stage" id="phasesStage">
-          <figure class="phase-img" data-phase="0">
-            <img src="https://images.unsplash.com/photo-1489514354504-1653aa90e34e?auto=format&fit=crop&w=1200&q=70" alt="Malha de ferragem armada sobre a laje de fundação" loading="lazy" decoding="async">
-          </figure>
-          <figure class="phase-img" data-phase="1">
-            <img src="https://images.unsplash.com/photo-1508450859948-4e04fabaa4ea?auto=format&fit=crop&w=1200&q=70" alt="Estrutura de concreto armado com escoramento e pilares aparentes" loading="lazy" decoding="async">
-          </figure>
-          <figure class="phase-img" data-phase="2">
-            <img src="https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?auto=format&fit=crop&w=1200&q=70" alt="Prumada de tubulação e registros instalada sobre alvenaria" loading="lazy" decoding="async">
-          </figure>
-          <figure class="phase-img" data-phase="3">
-            <img src="https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?auto=format&fit=crop&w=1200&q=70" alt="Revestimento cerâmico assentado e bancada de madeira em acabamento" loading="lazy" decoding="async">
-          </figure>
-          <figure class="phase-img" data-phase="4">
-            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=70" alt="Residência finalizada e entregue, iluminada ao entardecer" loading="lazy" decoding="async">
-          </figure>
-          <span class="phases__stamp mono" id="phasesStamp">Fase 01/05</span>
-        </div>
+      <figure class="masonry__item masonry__item--tall">
+        <button class="masonry__trigger" type="button" data-title="Casa Aurora Jardim" data-meta="Residencial · 2021">
+          <span class="masonry__media">
+            <img src="https://images.unsplash.com/photo-1503174971373-b1f69850bded?auto=format&fit=crop&w=1000&q=74" alt="Sala de estar ampla e envidraçada com vista para o jardim" loading="lazy" decoding="async">
+          </span>
+          <span class="masonry__caption">
+            <span class="masonry__title">Casa Aurora Jardim</span>
+            <span class="masonry__cat">Residencial · 2021</span>
+          </span>
+        </button>
+      </figure>
 
-        <div class="phases__panel">
-          <ol class="phases__rail" id="phasesRail">
-            <li class="phase-tick is-active"><span class="mono">01</span> Fundação</li>
-            <li class="phase-tick"><span class="mono">02</span> Estrutura</li>
-            <li class="phase-tick"><span class="mono">03</span> Instalações</li>
-            <li class="phase-tick"><span class="mono">04</span> Acabamento</li>
-            <li class="phase-tick"><span class="mono">05</span> Entrega</li>
-          </ol>
+      <figure class="masonry__item masonry__item--wide">
+        <button class="masonry__trigger" type="button" data-title="Ateliê Pinheiros" data-meta="Reforma · 2022">
+          <span class="masonry__media">
+            <img src="https://images.unsplash.com/photo-1517581177682-a085bb7ffb15?auto=format&fit=crop&w=1400&q=74" alt="Ateliê com escoras aparentes e alvenaria em fase de acabamento" loading="lazy" decoding="async">
+          </span>
+          <span class="masonry__caption">
+            <span class="masonry__title">Ateliê Pinheiros</span>
+            <span class="masonry__cat">Reforma · 2022</span>
+          </span>
+        </button>
+      </figure>
 
-          <div class="phases__readouts" id="phasesReadouts">
-            <article class="phase-read is-active" data-phase="0">
-              <h3>Fundação</h3>
-              <p>Sondagem, terraplenagem e armação. É aqui que o cronograma inteiro é decidido: cada centímetro conferido no gabarito economiza semanas de correção lá na frente.</p>
-            </article>
-            <article class="phase-read" data-phase="1">
-              <h3>Estrutura</h3>
-              <p>Fôrmas, concretagem e alvenaria. Equipe própria, sem subcontratação — o mesmo mestre de obra acompanha do primeiro pilar à última laje.</p>
-            </article>
-            <article class="phase-read" data-phase="2">
-              <h3>Instalações</h3>
-              <p>Hidráulica, elétrica, climatização e automação passam antes do fechamento. Tudo fotografado e mapeado em planta as-built antes de qualquer parede subir.</p>
-            </article>
-            <article class="phase-read" data-phase="3">
-              <h3>Acabamento</h3>
-              <p>Revestimentos, marcenaria e pintura. Nossa oficina produz as peças sob medida, o que elimina a espera por fornecedor e o retrabalho de ajuste em obra.</p>
-            </article>
-            <article class="phase-read" data-phase="4">
-              <h3>Entrega</h3>
-              <p>Vistoria técnica assistida, manual do proprietário e doze meses de acompanhamento pós-obra. A chave só troca de mão com a lista de pendências zerada.</p>
-            </article>
-          </div>
-        </div>
-      </div>
+      <figure class="masonry__item masonry__item--std">
+        <button class="masonry__trigger" type="button" data-title="Residência Granja" data-meta="Residencial · 2020">
+          <span class="masonry__media">
+            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=900&q=74" alt="Volume branco térreo com piscina e vegetação ao redor" loading="lazy" decoding="async">
+          </span>
+          <span class="masonry__caption">
+            <span class="masonry__title">Residência Granja</span>
+            <span class="masonry__cat">Residencial · 2020</span>
+          </span>
+        </button>
+      </figure>
 
-      <footer class="phases__meta">
-        <span class="mono"><b>124</b> obras entregues</span>
-        <span class="mono"><b>46.800</b> m² construídos</span>
-        <span class="mono"><b>18</b> anos de atuação</span>
-        <span class="mono phases__meta-last"><b>97%</b> entregues no prazo</span>
-      </footer>
+      <figure class="masonry__item masonry__item--std">
+        <button class="masonry__trigger" type="button" data-title="Casa Vidro e Pedra" data-meta="Residencial · 2021">
+          <span class="masonry__media">
+            <img src="https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?auto=format&fit=crop&w=900&q=74" alt="Cozinha em azulejo branco com bancada e detalhes em madeira" loading="lazy" decoding="async">
+          </span>
+          <span class="masonry__caption">
+            <span class="masonry__title">Casa Vidro e Pedra</span>
+            <span class="masonry__cat">Residencial · 2021</span>
+          </span>
+        </button>
+      </figure>
 
     </div>
   </section>
 
-  <!-- 5. ESTÚDIO -->
+  <!-- 3. ESTÚDIO — sobre, diferenciais, processo -->
   <section class="studio" id="estudio">
     <div class="container studio__grid">
-      <div class="studio__media" data-parallax-host data-reveal-mask>
-        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1100&q=72" alt="Arquiteto desenhando sobre prancha técnica com escalímetro e planta impressa" loading="lazy" decoding="async">
+      <div class="studio__media">
+        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1100&q=72" alt="Arquiteta desenhando sobre prancha técnica com escalímetro e planta impressa" loading="lazy" decoding="async">
       </div>
 
       <div class="studio__content">
         <p class="eyebrow" data-reveal>O estúdio</p>
-        <h2 class="section-title" data-reveal>Arquitetura e obra sob o mesmo teto</h2>
-        <p class="studio__lead" data-reveal>Não terceirizamos as decisões que definem o resultado. Projetistas e mestres de obra trabalham na mesma mesa, o que elimina o intervalo — e o ruído — entre o desenho e a execução.</p>
+        <h2 class="section-title" data-reveal>Arquitetura e obra sob o mesmo olhar</h2>
+        <p class="studio__lead" data-reveal>A Cerne nasceu da convicção de que projeto e execução não deveriam ser etapas separadas. Arquitetos e mestres de obra trabalham lado a lado, do estudo de viabilidade ao último detalhe de acabamento — para que o que foi desenhado seja exatamente o que se constrói.</p>
 
-        <dl class="studio__diff">
-          <div class="studio__diff-row" data-reveal>
-            <dt>Equipe própria</dt>
-            <dd>Fundação, estrutura e acabamento executados por gente contratada por nós, não por terceiros rotativos.</dd>
-          </div>
-          <div class="studio__diff-row" data-reveal>
-            <dt>Orçamento fechado</dt>
-            <dd>Custo definido antes da primeira concretagem, com planilha aberta de insumos e mão de obra.</dd>
-          </div>
-          <div class="studio__diff-row" data-reveal>
-            <dt>Obra auditável</dt>
-            <dd>Relatório fotográfico semanal, cronograma público e canal direto com o engenheiro responsável.</dd>
-          </div>
-        </dl>
+        <ul class="studio__diffs" data-reveal>
+          <li>Projeto e execução na mesma equipe</li>
+          <li>Visitas semanais à obra</li>
+          <li>Orçamento aberto ao cliente</li>
+          <li>Fornecedores selecionados a dedo</li>
+        </ul>
+
+        <blockquote class="studio__quote" data-reveal>
+          <p>“Cada obra carrega a marca de quem a conduziu com atenção.”</p>
+          <cite>Marina Aquino, arquiteta fundadora</cite>
+        </blockquote>
+
+        <div class="studio__process">
+          <p class="studio__process-label mono" data-reveal>Como conduzimos um projeto</p>
+          <ol class="studio__steps">
+            <li data-reveal><span class="studio__step-index mono">01 —</span> <span class="studio__step-text"><strong>Escuta.</strong> Entendemos rotina, orçamento e o que precisa mudar antes de propor qualquer solução.</span></li>
+            <li data-reveal><span class="studio__step-index mono">02 —</span> <span class="studio__step-text"><strong>Estudo de viabilidade.</strong> Levantamento técnico, legal e de custo para validar o projeto antes de desenhá-lo.</span></li>
+            <li data-reveal><span class="studio__step-index mono">03 —</span> <span class="studio__step-text"><strong>Projeto executivo.</strong> Arquitetura, estrutura e instalações compatibilizadas em um único conjunto de pranchas.</span></li>
+            <li data-reveal><span class="studio__step-index mono">04 —</span> <span class="studio__step-text"><strong>Obra acompanhada.</strong> Equipe própria em campo, com relatório fotográfico semanal e cronograma público.</span></li>
+            <li data-reveal><span class="studio__step-index mono">05 —</span> <span class="studio__step-text"><strong>Entrega e pós-obra.</strong> Vistoria assistida e doze meses de acompanhamento após a chave na mão.</span></li>
+          </ol>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- 6. CONTATO -->
+  <!-- 4. CONTATO -->
   <section class="contact" id="contato">
     <div class="container contact__grid">
       <div class="contact__intro">
-        <p class="eyebrow eyebrow--light" data-reveal>Vamos conversar</p>
-        <h2 class="contact__title" data-reveal>Conte-nos sobre o projeto que você tem em mente</h2>
-        <p class="contact__desc" data-reveal>Respondemos pessoalmente em até dois dias úteis. Sem formulário automático, sem fila de atendimento.</p>
-
-        <ul class="contact__info">
-          <li><span class="mono">Telefone</span><a href="tel:+551140028922">+55 11 4002-8922</a></li>
-          <li><span class="mono">E-mail</span><a href="mailto:contato@cerneconstrucoes.com.br">contato@cerneconstrucoes.com.br</a></li>
-          <li><span class="mono">Estúdio</span><span>São Paulo, SP — atendimento em todo o Brasil</span></li>
-        </ul>
+        <p class="eyebrow" data-reveal>Contato</p>
+        <h2 class="section-title" data-reveal>Vamos falar sobre o seu projeto</h2>
+        <p class="contact__desc" data-reveal>Conte um pouco sobre a obra ou reforma que você tem em mente. Respondemos pessoalmente em até um dia útil.</p>
       </div>
 
-      <form class="contact-form" action="#" method="post" novalidate>
-        <div class="contact-form__row">
-          <div class="field">
-            <label for="nome">Nome completo</label>
-            <input type="text" id="nome" name="nome" autocomplete="name" required>
-          </div>
-          <div class="field">
-            <label for="telefone">Telefone</label>
-            <input type="tel" id="telefone" name="telefone" autocomplete="tel" required>
-          </div>
-        </div>
-
-        <div class="field">
-          <label for="tipo-projeto">Tipo de projeto</label>
-          <select id="tipo-projeto" name="tipo-projeto" required>
-            <option value="">Selecione uma opção</option>
-            <option value="residencial">Residencial</option>
-            <option value="comercial">Comercial</option>
-            <option value="reforma">Reforma de alto padrão</option>
-            <option value="outro">Outro</option>
-          </select>
-        </div>
-
-        <div class="field">
-          <label for="mensagem">Mensagem</label>
-          <textarea id="mensagem" name="mensagem" rows="4" placeholder="Conte um pouco sobre o terreno, o imóvel ou a ideia inicial." required></textarea>
-        </div>
-
-        <button type="submit" class="btn btn--bronze contact-form__submit">Enviar mensagem</button>
-      </form>
+      <ul class="contact__info" data-reveal>
+        <li>
+          <span class="contact__label mono">Telefone</span>
+          <a href="tel:+551140028922">+55 11 4002-8922</a>
+        </li>
+        <li>
+          <span class="contact__label mono">E-mail</span>
+          <a href="mailto:contato@cerneconstrucoes.com.br">contato@cerneconstrucoes.com.br</a>
+        </li>
+        <li>
+          <span class="contact__label mono">Atendimento</span>
+          <span>Seg. a sex., 9h às 18h — São Paulo, SP</span>
+        </li>
+        <li class="contact__whatsapp">
+          <span class="contact__label mono">Outro canal</span>
+          <a href="https://wa.me/5511911223344?text=Ol%C3%A1!%20Gostaria%20de%20falar%20sobre%20um%20projeto" target="_blank" rel="noopener">prefere WhatsApp? fale por aqui</a>
+        </li>
+      </ul>
     </div>
   </section>
 
 </main>
 
 <footer class="site-footer">
-  <div class="container site-footer__grid">
-    <div class="site-footer__brand">
-      <span class="logo__mark">CERNE</span>
-      <p>Arquitetura e execução de obras residenciais e comerciais de alto padrão.</p>
-    </div>
-
-    <nav class="site-footer__col" aria-label="Navegação do rodapé">
-      <span class="site-footer__heading mono">Navegação</span>
-      <a href="#obras">Obras</a>
-      <a href="#fases">Fases</a>
-      <a href="#estudio">Estúdio</a>
-      <a href="#contato">Contato</a>
-    </nav>
-
-    <div class="site-footer__col">
-      <span class="site-footer__heading mono">Contato</span>
-      <a href="tel:+551140028922">+55 11 4002-8922</a>
-      <a href="mailto:contato@cerneconstrucoes.com.br">contato@cerneconstrucoes.com.br</a>
-      <span>São Paulo, SP</span>
-    </div>
-
-    <div class="site-footer__col">
-      <span class="site-footer__heading mono">Redes</span>
-      <a href="#topo">Instagram</a>
-      <a href="#topo">LinkedIn</a>
-      <a href="#topo">Pinterest</a>
-    </div>
-  </div>
-
-  <div class="site-footer__bottom">
-    <div class="container site-footer__bottom-inner">
-      <span class="mono">© 2026 Cerne Construções</span>
-      <span class="mono">CNPJ 00.000.000/0001-00 · CREA 000000-0</span>
-    </div>
+  <div class="container site-footer__inner">
+    <span class="logo__mark">CERNE</span>
+    <span class="mono">© 2026 Cerne Construções — Arquitetura e Construção Civil · São Paulo, SP</span>
+    <a href="#topo" class="site-footer__top">Voltar ao topo</a>
   </div>
 </footer>
 
-<!-- Preview que segue o cursor / elemento que se expande via Flip -->
-<div class="wpreview" id="wpreview" aria-hidden="true">
-  <img class="wpreview__img" data-i="0" src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1000&q=68" alt="" decoding="async">
-  <img class="wpreview__img" data-i="1" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=68" alt="" decoding="async">
-  <img class="wpreview__img" data-i="2" src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=68" alt="" decoding="async">
-  <img class="wpreview__img" data-i="3" src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1000&q=68" alt="" decoding="async">
-  <img class="wpreview__img" data-i="4" src="https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=1000&q=68" alt="" decoding="async">
-  <img class="wpreview__img" data-i="5" src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=1000&q=68" alt="" decoding="async">
-</div>
-
-<!-- Painel de detalhe da obra -->
-<div class="wpanel" id="wpanel" role="dialog" aria-modal="true" aria-labelledby="wpTitle" hidden>
-  <div class="wpanel__bg" id="wpanelBg"></div>
-
-  <div class="wpanel__shell">
-    <div class="wpanel__media" id="wpMedia"></div>
-
-    <div class="wpanel__info" id="wpInfo">
-      <div class="wpanel__topline">
-        <span class="mono" id="wpTag">Residencial / 2024</span>
-        <button class="wpanel__close" id="wpClose" type="button">
-          <span class="mono">Fechar</span>
-          <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 1l12 12M13 1L1 13" stroke="currentColor" stroke-width="1.4"/></svg>
-        </button>
-      </div>
-
-      <h3 class="wpanel__title" id="wpTitle">Casa Aurora</h3>
-      <p class="wpanel__desc" id="wpDesc"></p>
-
-      <dl class="wpanel__spec">
-        <div><dt class="mono">Área</dt><dd id="wpArea"></dd></div>
-        <div><dt class="mono">Prazo</dt><dd id="wpPrazo"></dd></div>
-        <div><dt class="mono">Local</dt><dd id="wpLocal"></dd></div>
-        <div><dt class="mono">Escopo</dt><dd id="wpEscopo"></dd></div>
-      </dl>
-
-      <div class="wpanel__gallery" id="wpGallery"></div>
-
-      <a href="#contato" class="btn btn--bronze wpanel__cta" id="wpCta">Quero um projeto assim</a>
-    </div>
-  </div>
+<!-- Lightbox da galeria — expansão via GSAP Flip -->
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <div class="lightbox__scrim" id="lightboxScrim"></div>
+  <button class="lightbox__close" id="lightboxClose" type="button" aria-label="Fechar imagem ampliada">
+    <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M1 1l14 14M15 1L1 15" stroke="currentColor" stroke-width="1.4"/></svg>
+  </button>
+  <div class="lightbox__stage" id="lightboxStage"></div>
+  <p class="lightbox__caption" id="lightboxCaption"></p>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
