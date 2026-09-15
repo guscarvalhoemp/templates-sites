@@ -249,7 +249,7 @@
 
       var title = trigger.getAttribute("data-title") || "";
       var meta = trigger.getAttribute("data-meta") || "";
-      captionEl.textContent = title + (meta ? " — " + meta : "");
+      captionEl.textContent = title + (meta ? ", " + meta : "");
 
       document.documentElement.classList.add("lightbox-open");
       lightbox.classList.add("is-open");

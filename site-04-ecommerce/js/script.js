@@ -94,7 +94,7 @@
       nome: "Cápsula Ritual",
       torra: "Intensidade 10",
       peso: "10 unidades",
-      notas: "Cacau, madeira, especiarias — compatível com sistemas de cápsula padrão*",
+      notas: "Cacau, madeira, especiarias, compatível com sistemas de cápsula padrão*",
       nota: 4.6,
       preco: 36.90,
       img: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=600&q=80"
@@ -116,7 +116,7 @@
       nome: "Kit Ritual do Coador",
       torra: "Kit completo",
       peso: "Coador + suporte + colher",
-      notas: "Coador de pano, suporte em aço e colher dosadora — o básico bem feito",
+      notas: "Coador de pano, suporte em aço e colher dosadora, o básico bem feito",
       nota: 4.8,
       preco: 89.90,
       img: "https://images.unsplash.com/photo-1550985616-10810253b84d?auto=format&fit=crop&w=600&q=80"
@@ -197,7 +197,7 @@
     categoryGrid.innerHTML = CATEGORIES.map(function (c) {
       return (
         '<button type="button" class="category-card" data-cat="' + c.id + '">' +
-          '<img src="' + c.img + '" alt="Café — categoria ' + c.nome + '" loading="lazy">' +
+          '<img src="' + c.img + '" alt="Café, categoria ' + c.nome + '" loading="lazy">' +
           '<span class="category-card-label">' +
             '<span class="category-card-name">' + c.nome + '</span>' +
             '<span class="category-card-count">' + countByCategory(c.id) + '</span>' +
@@ -230,7 +230,7 @@
       return (
         '<article class="product-card" data-id="' + p.id + '" data-cat="' + p.cat + '">' +
           '<div class="product-media">' +
-            '<img src="' + p.img + '" alt="' + p.nome + ' — café ' + CAT_LABELS[p.cat] + '" loading="lazy">' +
+            '<img src="' + p.img + '" alt="' + p.nome + ', café ' + CAT_LABELS[p.cat] + '" loading="lazy">' +
             '<span class="product-roast">' + p.torra + '</span>' +
             (p.novo ? '<span class="product-new">Novo</span>' : '') +
             '<div class="product-details">' +
