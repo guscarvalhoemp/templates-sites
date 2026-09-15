@@ -270,8 +270,9 @@ em{ font-style: italic; font-family: var(--font-display); font-weight: 600; colo
   display: flex; align-items: center; justify-content: center; text-align: center;
   background: var(--wine-dark);
   padding: var(--space-6) var(--space-3);
-  cursor: crosshair;
 }
+@media (hover: hover){ .mood{ cursor: crosshair; } }
+
 .mood__tag{
   font-family: var(--font-display); font-size: clamp(1.4rem, 2.6vw, 2rem);
   color: var(--gold-soft); margin-bottom: var(--space-2); display: block;
@@ -284,6 +285,13 @@ em{ font-style: italic; font-family: var(--font-display); font-weight: 600; colo
   margin-top: var(--space-2); color: var(--cream-50); font-size: .85rem;
   letter-spacing: .1em; text-transform: uppercase;
 }
+/* Desktop mostra "mova o cursor"; touch mostra "toque para revelar" — nunca os dois juntos */
+.mood__tag--mobile, .mood__hint--mobile{ display: none; }
+@media (hover: none){
+  .mood__tag--desktop, .mood__hint--desktop{ display: none; }
+  .mood__tag--mobile{ display: block; }
+  .mood__hint--mobile{ display: block; }
+}
 .mood__trail{ position: absolute; inset: 0; z-index: 0; pointer-events: none; }
 .mood__trail img{
   position: absolute; top: 0; left: 0;
@@ -294,8 +302,54 @@ em{ font-style: italic; font-family: var(--font-display); font-weight: 600; colo
   will-change: transform, opacity;
 }
 @media (max-width: 640px){
-  .mood{ min-height: 46vh; }
+  .mood{ min-height: 56vh; }
   .mood__trail img{ width: 92px; height: 92px; }
+}
+
+/* =========================================================================
+   CARDÁPIO — grid de amostragem (molduras grandes + etiqueta em pílula)
+   ========================================================================= */
+.menu{ padding: var(--space-6) 0; background: var(--cream); }
+.menu__head{ max-width: 640px; margin-bottom: var(--space-4); }
+.menu__head h2{ font-size: clamp(1.8rem, 3.4vw, 2.6rem); margin-bottom: var(--space-2); }
+.menu__lede{ font-size: 1.05rem; color: var(--ink-70); max-width: 50ch; }
+
+.menu__filters{ display: flex; flex-wrap: wrap; gap: .6rem; margin-bottom: var(--space-4); }
+.menu__chip{
+  padding: .55em 1.3em; border-radius: 999px; border: 1.5px solid var(--wine-soft);
+  font-size: .85rem; font-weight: 600; color: var(--wine-dark); background: transparent;
+  transition: background var(--dur-fast) var(--ease-out), color var(--dur-fast), border-color var(--dur-fast);
+}
+.menu__chip:hover{ border-color: var(--wine); }
+.menu__chip.is-active{ background: var(--wine); border-color: var(--wine); color: var(--cream); }
+
+.menu__grid{
+  display: grid; grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem 1.1rem;
+  margin-bottom: var(--space-4);
+}
+.menu__item{ display: flex; flex-direction: column; align-items: center; margin: 0; }
+.menu__item[hidden]{ display: none; }
+.menu__frame{
+  display: block; width: 100%; aspect-ratio: 3 / 4; overflow: hidden;
+  border-radius: 1.6rem;
+}
+.menu__frame img{ width: 100%; height: 100%; object-fit: cover; }
+.menu__item figcaption{
+  margin-top: -1.3rem; z-index: 1;
+  font-family: var(--font-display); font-weight: 600; font-size: 1.05rem;
+  color: var(--cream); background: var(--wine);
+  padding: .35em 1.15em; border-radius: 999px;
+  box-shadow: 0 8px 18px rgba(20,6,11,.28);
+  white-space: nowrap;
+}
+.menu__link{ margin-top: var(--space-2); }
+
+@media (min-width: 640px){
+  .menu__grid{ grid-template-columns: repeat(3, 1fr); }
+}
+@media (min-width: 960px){
+  .menu__grid{ grid-template-columns: repeat(4, 1fr); gap: 2rem 1.4rem; }
 }
 
 /* =========================================================================

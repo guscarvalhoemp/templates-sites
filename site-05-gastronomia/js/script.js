@@ -49,6 +49,31 @@
     });
   }
 
+  /* ---------------- Filtro do cardápio ---------------- */
+  var menuFilters = document.querySelector(".menu__filters");
+  var menuItems = document.querySelectorAll(".menu__item");
+  if (menuFilters && menuItems.length){
+    menuFilters.addEventListener("click", function(e){
+      var chip = e.target.closest(".menu__chip");
+      if (!chip) return;
+      var cat = chip.dataset.filter;
+
+      menuFilters.querySelectorAll(".menu__chip").forEach(function(c){
+        c.classList.toggle("is-active", c === chip);
+      });
+      menuItems.forEach(function(item){
+        var show = cat === "all" || item.dataset.cat === cat;
+        item.hidden = !show;
+        // Esconder/mostrar itens muda a altura do grid, e o ScrollTrigger do
+        // [data-reveal] (que usa toggleActions "...reverse") pode reagir a
+        // esse reflow como se o item tivesse saído da tela e escondê-lo de
+        // novo (opacity:0). Forçar visível aqui evita esse falso "reverse".
+        if (show && window.gsap){ gsap.set(item, { opacity: 1, y: 0 }); }
+      });
+      if (window.ScrollTrigger){ ScrollTrigger.refresh(); }
+    });
+  }
+
   /* ---------------- Split de caracteres do wordmark ---------------- */
   function splitChars(el){
     var text = el.textContent;
@@ -117,6 +142,8 @@
     var pool = document.querySelector("[data-trail]");
     if (!section || !pool || prefersReduced) return;
 
+    var isTouch = !(window.matchMedia && window.matchMedia("(hover: hover)").matches);
+
     var SOURCES = [
       "https://images.unsplash.com/photo-1476124369491-e7addf5db371?auto=format&fit=crop&w=260&q=70",
       "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=260&q=70",
@@ -144,6 +171,12 @@
       });
     }
 
+    function placeAt(img, x, y, z){
+      gsap.set(img, { x: x - img.offsetWidth / 2, y: y - img.offsetHeight / 2, zIndex: z, force3D: true });
+      gsap.fromTo(img, { autoAlpha: 0, scale: .8 }, { autoAlpha: 1, scale: 1, duration: .3, ease: "back.out(1.6)", overwrite: true });
+    }
+
+    /* ---- Desktop/mouse: rastro que segue o cursor e some quando ele para/sai ---- */
     function onMove(e){
       var rect = section.getBoundingClientRect();
       var x = e.clientX - rect.left;
@@ -151,10 +184,7 @@
       var dist = Math.hypot(x - lastX, y - lastY);
       if (dist < THRESHOLD) return;
 
-      var img = imgs[index % imgs.length];
-      gsap.set(img, { x: x - img.offsetWidth / 2, y: y - img.offsetHeight / 2, zIndex: index, force3D: true });
-      gsap.fromTo(img, { autoAlpha: 0, scale: .8 }, { autoAlpha: 1, scale: 1, duration: .25, overwrite: true });
-
+      placeAt(imgs[index % imgs.length], x, y, index);
       lastX = x; lastY = y; index++;
       clearTimeout(idleTimer);
       idleTimer = setTimeout(function(){ fadeAllOut(.8); }, 400);
@@ -166,8 +196,24 @@
       lastX = 0; lastY = 0;
     }
 
-    section.addEventListener("mousemove", onMove);
-    section.addEventListener("mouseleave", onLeave);
+    /* ---- Mobile/touch: cada toque revela um prato e ele permanece ali ---- */
+    function onTap(e){
+      if (index >= imgs.length) return; // as 5 fotos já foram reveladas, nada mais a mostrar
+      var rect = section.getBoundingClientRect();
+      var point = e.changedTouches ? e.changedTouches[0] : e;
+      var x = point.clientX - rect.left;
+      var y = point.clientY - rect.top;
+
+      placeAt(imgs[index], x, y, index);
+      index++;
+    }
+
+    if (isTouch){
+      section.addEventListener("click", onTap);
+    } else {
+      section.addEventListener("mousemove", onMove);
+      section.addEventListener("mouseleave", onLeave);
+    }
   }
   initMoodTrail();
 

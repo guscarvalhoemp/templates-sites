@@ -107,28 +107,71 @@
   <section class="mood" id="sabores" aria-labelledby="mood-titulo">
     <div class="mood__trail" data-trail aria-hidden="true"></div>
     <div>
-      <span class="mood__tag">mova o cursor</span>
+      <span class="mood__tag mood__tag--desktop">mova o cursor</span>
+      <span class="mood__tag mood__tag--mobile">toque para revelar</span>
       <h2 id="mood-titulo" class="mood__title" data-reveal>Qual sabor vai querer hoje?</h2>
-      <p class="mood__hint">passe o mouse por aqui</p>
+      <p class="mood__hint mood__hint--desktop">passe o mouse por aqui</p>
+      <p class="mood__hint mood__hint--mobile">toque em qualquer lugar aqui</p>
     </div>
   </section>
 
-  <!-- ================== BLOCO 1 — CARDÁPIO ================== -->
-  <section class="split" id="cardapio" aria-labelledby="cardapio-titulo">
-    <div class="split__media" data-parallax>
-      <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=1200&q=80" alt="Massa fresca com molho de cozimento lento, finalizada à mesa em evento da Casa Fabbrica" loading="lazy" width="1200" height="1500">
-    </div>
-    <div class="split__text">
-      <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span>O cardápio</p>
-      <h2 id="cardapio-titulo" data-reveal>Cozinha autoral, pensada tempo a tempo.</h2>
-      <p class="split__lede" data-reveal>Do couvert à sobremesa, cada cardápio é construído junto com você: pães de fermentação natural, massas frescas feitas na hora e um ragu que cozinha por horas antes de chegar ao prato.</p>
-      <ul class="split__list" data-reveal>
-        <li>Couvert de fermentação natural e curados da casa</li>
-        <li>Massas e pratos principais preparados no dia do evento</li>
-        <li>Estação de sobremesas aberta até o fim da festa</li>
-        <li>Cardápio construído com o cliente, sem repetição de menu</li>
-      </ul>
-      <a href="#reserva" class="split__link" data-reveal>Provar o cardápio<span aria-hidden="true"> →</span></a>
+  <!-- ================== BLOCO 1 — CARDÁPIO (grid de amostragem) ================== -->
+  <section class="menu" id="cardapio" aria-labelledby="cardapio-titulo">
+    <div class="shell">
+      <div class="menu__head">
+        <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span>O cardápio</p>
+        <h2 id="cardapio-titulo" data-reveal>Cozinha autoral, servida por estações.</h2>
+        <p class="menu__lede" data-reveal>Do couvert à sobremesa, cada cardápio é construído junto com você — sem repetição de menu de um evento para outro.</p>
+      </div>
+
+      <div class="menu__filters" role="group" aria-label="Filtrar cardápio" data-reveal>
+        <button type="button" class="menu__chip is-active" data-filter="all">Tudo</button>
+        <button type="button" class="menu__chip" data-filter="entradas">Entradas</button>
+        <button type="button" class="menu__chip" data-filter="principais">Principais</button>
+        <button type="button" class="menu__chip" data-filter="sobremesas">Sobremesas</button>
+        <button type="button" class="menu__chip" data-filter="vinhos">Vinhos</button>
+      </div>
+
+      <div class="menu__grid" id="menuGrid">
+        <figure class="menu__item" data-cat="entradas" data-reveal>
+          <span class="menu__frame"><img src="https://images.unsplash.com/photo-1626200419199-391ae4be7a41?auto=format&fit=crop&w=500&q=75" alt="Creme de ervilhas com grissini" loading="lazy"></span>
+          <figcaption>Creme de Ervilhas</figcaption>
+        </figure>
+        <figure class="menu__item" data-cat="principais" data-reveal>
+          <span class="menu__frame"><img src="https://images.unsplash.com/photo-1580476262798-bddd9f4b7369?auto=format&fit=crop&w=500&q=75" alt="Salmão grelhado com tabule de ervas" loading="lazy"></span>
+          <figcaption>Salmão Grelhado</figcaption>
+        </figure>
+        <figure class="menu__item" data-cat="entradas" data-reveal>
+          <span class="menu__frame"><img src="https://images.unsplash.com/photo-1559847844-5315695dadae?auto=format&fit=crop&w=500&q=75" alt="Camarão ao molho de ervas com arroz" loading="lazy"></span>
+          <figcaption>Camarão ao Molho</figcaption>
+        </figure>
+        <figure class="menu__item" data-cat="principais" data-reveal>
+          <span class="menu__frame"><img src="https://images.unsplash.com/photo-1476124369491-e7addf5db371?auto=format&fit=crop&w=500&q=75" alt="Risoto de funghi finalizado à mesa" loading="lazy"></span>
+          <figcaption>Risoto de Funghi</figcaption>
+        </figure>
+        <figure class="menu__item" data-cat="principais" data-reveal>
+          <span class="menu__frame"><img src="https://images.unsplash.com/photo-1432139555190-58524dae6a55?auto=format&fit=crop&w=500&q=75" alt="Lombo glaceado com maçãs caramelizadas" loading="lazy"></span>
+          <figcaption>Lombo Glaceado</figcaption>
+        </figure>
+        <figure class="menu__item" data-cat="sobremesas" data-reveal>
+          <span class="menu__frame"><img src="https://images.unsplash.com/photo-1624353365286-3f8d62daad51?auto=format&fit=crop&w=500&q=75" alt="Brownie quente com sorvete de creme" loading="lazy"></span>
+          <figcaption>Brownie Quente</figcaption>
+        </figure>
+        <figure class="menu__item" data-cat="sobremesas" data-reveal>
+          <span class="menu__frame"><img src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=500&q=75" alt="Tiramisù da casa" loading="lazy"></span>
+          <figcaption>Tiramisù da Casa</figcaption>
+        </figure>
+        <figure class="menu__item" data-cat="vinhos" data-reveal>
+          <span class="menu__frame"><img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=500&q=75" alt="Taça de malbec reserva" loading="lazy"></span>
+          <figcaption>Malbec Reserva</figcaption>
+        </figure>
+        <figure class="menu__item" data-cat="vinhos" data-reveal>
+          <span class="menu__frame"><img src="https://images.unsplash.com/photo-1553361371-9b22f78e8b1d?auto=format&fit=crop&w=500&q=75" alt="Taça de tinto servida à mesa" loading="lazy"></span>
+          <figcaption>Seleção do Sommelier</figcaption>
+        </figure>
+      </div>
+
+      <a href="#reserva" class="split__link menu__link" data-reveal>Provar o cardápio<span aria-hidden="true"> →</span></a>
     </div>
   </section>
 
